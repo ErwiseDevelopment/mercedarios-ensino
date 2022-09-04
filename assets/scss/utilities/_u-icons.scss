@@ -1,0 +1,63 @@
+$utility-name: 'u-icon';
+
+.#{$utility-name} {
+    &__brands {
+        &::before {
+            font-family: 'Font Awesome 5 Brands';
+        }
+    }
+
+    &__free {
+        &::before {
+            font-family: 'Font Awesome 5 Free';
+        }
+    }
+
+    &__envelope {
+        &::before {
+            content: '\f0e0';
+        }
+    }
+    
+    &__facebook {
+        &::before {
+            content: '\f39e';
+        }
+    }
+
+    &__instagram {
+        &::before {
+            content: '\f16d';
+        }
+    }
+
+    &__map {
+        &::before {
+            content: '\f3c5';
+        }
+    }
+
+    &__phone {
+        &::before {
+            content: '\f879';
+        }
+    }
+
+    &__search {
+        &::before {
+            content: '\f002';
+        }
+    }
+
+    &__youtube {
+        &::before {
+            content: '\f167';
+        }
+    }
+
+    &__whatsapp {
+        &::before {
+            content: '\f232';
+        }
+    }
+}
