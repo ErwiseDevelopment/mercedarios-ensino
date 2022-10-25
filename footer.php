@@ -209,7 +209,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-12 my-4">
+            <div class="col-12">
                         
                         <div class="row">
 
