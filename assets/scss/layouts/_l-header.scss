@@ -1,0 +1,13 @@
+$layout-name: 'l-header';
+
+.#{$layout-name} {
+    .container {
+        padding-top: 1rem;
+        border-top: 2px solid;
+        border-color: $color-folk-gray;
+
+        @media screen and (max-width: 991px) {
+            border: 0;
+        }
+    }
+}

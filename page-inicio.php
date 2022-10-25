@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy 
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WP_Bootstrap_Starter
  */
@@ -19,26 +19,33 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<!-- menu -->
-<?php echo get_template_part( 'template-parts/content', 'menu-editorials' ) ?>
-<!-- end menu -->
-
 <!-- banner -->
-<?php echo get_template_part( 'template-parts/content', 'banner' ) ?>
+<?php echo get_template_part( 'template-parts/content', 'home-banner' ) ?>
 <!-- end banner -->
 
+<!-- teaching -->
+<?php echo get_template_part( 'template-parts/content', 'home-teaching' ) ?>
+<!-- end teaching -->
+
+<!-- differences -->
+<?php echo get_template_part( 'template-parts/content', 'home-our-differences' ) ?>
+<!-- end differences -->
+
 <!-- news -->
-<?php echo get_template_part( 'template-parts/content', 'news' ) ?>
+<?php echo get_template_part( 'template-parts/content', 'home-news' ) ?>
 <!-- end news -->
 
-<!-- blog -->
-<?php echo get_template_part( 'template-parts/content', 'blog' ) ?>
-<!-- end blog -->
+<!-- photos -->
+<?php echo get_template_part( 'template-parts/content', 'home-photos' ) ?>
+<!-- end photos -->
 
-<img
-class="img-fluid"
-data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
-alt="Single Temas">
+<!-- newsletter -->
+<?php echo get_template_part( 'template-parts/content', 'newsletter' ) ?>
+<!-- end newsletter -->
+
+<!-- banner material -->
+<?php echo get_template_part( 'template-parts/content', 'banner-material' ) ?>
+<!-- end banner material -->
 
 <?php endwhile; ?>
 

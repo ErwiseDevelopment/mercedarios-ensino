@@ -24,5 +24,10 @@ $utility-name: 'u-font-family';
         &-cinzel * {
             font-family: 'Cinzel', sans-serif !important;
         }
+
+        &-nunito,
+        &-nunito * {
+            font-family: 'Nunito', sans-serif !important;
+        }
     }
 }

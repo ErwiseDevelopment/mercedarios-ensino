@@ -1,4 +1,4 @@
-<section class="u-bg-folk-light-gray py-4">
+<section class="py-3">
 
     <div class="container">
 
@@ -6,135 +6,93 @@
 
             <div class="col-12">
 
-                <div class="row justify-content-between">
+                <div class="row justify-content-end">
 
-                    <div class="col-4">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
 
-                        <ul class="mb-0 pl-0">
-                            <li class="u-list-style-none mb-2">
-                                <a 
-                                class="d-flex text-decoration-none"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    <span class="px:u-w-30 px:u-h-30 u-icon__free u-icon__envelope rounded-pill u-border-2 u-border-color-dark-marron d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-semibold u-color-folk-dark-marron hover:u-color-folk-white hover:u-bg-folk-dark-marron">
-                                        E-mail
-                                    </span>
+                        <div class="row justify-content-center">
 
-                                    <div class="u-line-height-100 d-flex flex-column pl-2">
-                                        <span class="u-font-size-12 u-font-weight-regular u-color-folk-gray">
-                                            Email
-                                        </span>
+                            <div class="col-8">
 
-                                        <span class="u-font-size-14 u-font-weight-semibold u-color-folk-dark-blue">
-                                            faleconosco@mercedarios.com.br
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="u-list-style-none mb-2">
-                                <a 
-                                class="d-flex text-decoration-none"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    <span class="px:u-w-30 px:u-h-30 u-icon__free u-icon__phone rounded-pill u-border-2 u-border-color-dark-marron d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-semibold u-color-folk-dark-marron hover:u-color-folk-white hover:u-bg-folk-dark-marron">
-                                        Telefone
-                                    </span>
-
-                                    <div class="u-line-height-100 d-flex flex-column pl-2">
-                                        <span class="u-font-size-12 u-font-weight-regular u-color-folk-gray">
-                                            Telefone
-                                        </span>
-
-                                        <span class="u-font-size-14 u-font-weight-semibold u-color-folk-dark-blue">
-                                            61 3346 3890
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="u-list-style-none mb-2">
-                                <a 
-                                class="d-flex text-decoration-none"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    <span class="px:u-w-30 px:u-h-30 u-icon__free u-icon__map rounded-pill u-border-2 u-border-color-dark-marron d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-semibold u-color-folk-dark-marron hover:u-color-folk-white hover:u-bg-folk-dark-marron">
-                                        Mapa
-                                    </span>
-
-                                    <div class="u-line-height-100 d-flex flex-column pl-2">
-                                        <span class="u-font-size-12 u-font-weight-regular u-color-folk-gray">
-                                            Endereço
-                                        </span>
-
-                                        <span class="u-font-size-14 u-font-weight-semibold u-color-folk-dark-blue">
-                                            Avenida L2 Sul, Quadra 615, Brasília - DF
-                                        </span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                                <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
+                                    <a href="<?php echo esc_url( home_url( '/' )); ?>">
+                                        <img 
+                                        class="img-fluid w-100 u-object-fit-cover"
+                                        src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" 
+                                        alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                                    </a>
+                                <?php else : ?>
+                                    <a 
+                                    class="site-title" 
+                                    href="<?php echo esc_url( home_url( '/' )); ?>">
+                                        <?php esc_url(bloginfo('name')); ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-4 d-flex justify-content-center align-items-center">
+                    <div class="col-lg-3">
 
-                        <a href="#">
-                            <img
-                            class="img-fluid"
-                            src="http://mercedarios.erwisedev-hml.com.br/wp-content/uploads/2022/08/cropped-logo1.png' ) ?>"
-                            alt="">
-                        </a>
-                    </div>
+                        <div class="row">
 
-                    <div class="col-4 d-flex justify-content-center align-items-center px-5">
+                            <div class="col-12 mb-4 mb-lg-2 px-5">
+                                <a
+                                class="w-100 d-block u-font-size-14 u-font-weight-bold u-font-fmaily-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-very-light-yellow py-2"
+                                href="#">
+                                    Acesso Restrito
+                                </a>
+                            </div>
+                        </div>
 
-                        <ul 
-                        class="w-100 px:u-border-radius-24 overflow-hidden d-flex justify-content-around align-items-center u-bg-cover u-bg-no-repeat mb-0 p-3"
-                        style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/social-media-overlay.png)">
+                        <div>
+                            <ul class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
                                 
-                            <li class="u-list-style-none">
-                                <a 
-                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    Facebook
-                                </a>
-                            </li>
+                                <li class="u-list-style-none mr-2">
+                                    <a
+                                    class="u-icon__brands u-icon__facebook shadow-lg rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-17 u-font-weight-regular text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden"
+                                    style="width:32px;height:32px;background-color:#851517"
+                                    href="#"
+                                    target="_blank"
+                                    rel="noreferrer noopener">
+                                        Link do Facebook
+                                    </a>
+                                </li>
 
-                            <li class="u-list-style-none">
-                                <a 
-                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    Instagram
-                                </a>
-                            </li>
+                                <li class="u-list-style-none mr-2">
+                                    <a
+                                    class="u-icon__brands u-icon__instagram shadow-lg rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-17 u-font-weight-regular text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden"
+                                    style="width:32px;height:32px;background-color:#851517"
+                                    href="#"
+                                    target="_blank"
+                                    rel="noreferrer noopener">
+                                        Link do Instagram
+                                    </a>
+                                </li>
 
-                            <li class="u-list-style-none">
-                                <a 
-                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    Youtube
-                                </a>
-                            </li>
+                                <li class="u-list-style-none mr-2">
+                                    <a
+                                    class="u-icon__brands u-icon__youtube shadow-lg rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-17 u-font-weight-regular text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden"
+                                    style="width:32px;height:32px;background-color:#851517"
+                                    href="#"
+                                    target="_blank"
+                                    rel="noreferrer noopener">
+                                        Link do Youtube
+                                    </a>
+                                </li>
 
-                            <li class="u-list-style-none">
-                                <a 
-                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-white"
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer noopener">
-                                    Whatsapp
-                                </a>
-                            </li>
-                        </ul>
+                                <li class="u-list-style-none mr-2">
+                                    <a
+                                    class="u-icon__brands u-icon__whatsapp shadow-lg rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-17 u-font-weight-regular text-decoration-none u-color-folk-white hover:u-bg-folk-dark-golden"
+                                    style="width:32px;height:32px;background-color:#851517"
+                                    href="#"
+                                    target="_blank"
+                                    rel="noreferrer noopener">
+                                        Link do Whatsapp
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

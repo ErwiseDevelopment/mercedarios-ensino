@@ -1,0 +1,32 @@
+$layout-name: 'l-blog';
+
+.#{$layout-name} {
+    &__box {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 280px;
+            height: calc(100% + 2px);
+            top: 50%;
+            left: -2px;
+            transform: translateY(-50%);
+            position: absolute;
+            background-color: #FFF;
+
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
+        }
+    }
+
+    &__plus {
+        bottom: -2rem;
+        right: 2rem;
+        position: absolute;
+        font-size: 5.375rem;
+        font-weight: 800;
+        font-family: 'Nunito', sans-serif;
+        color: #FFB800;
+    }
+}

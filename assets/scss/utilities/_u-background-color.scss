@@ -13,16 +13,40 @@ $utility-name: 'u-bg-folk';
         background-color: $color-folk-dark-golden !important;
     }
 
+    &-dark-marron {
+        background-color: $color-folk-dark-marron !important;
+    }
+
     &-golden {
         background-color: $color-folk-golden !important;
+    }
+
+    &-green {
+        background-color: $color-folk-green !important;
     }
 
     &-light-gray {
         background-color: $color-folk-light-gray !important;
     }
 
+    &-light-yellow {
+        background-color: $color-folk-light-yellow !important;
+    }
+
     &-none {
         background: none !important;
+    }
+
+    &-very-light-gray {
+        background-color: $color-folk-very-light-gray !important;
+    }
+
+    &-very-light-yellow {
+        background-color: $color-folk-very-light-yellow !important;
+    }
+
+    &-yellow {
+        background-color: $color-folk-yellow !important;
     }
 
     &-white {
@@ -100,6 +124,12 @@ $utility-name: 'u-bg-folk';
         &-none {
             &:hover {
                 background: none !important;
+            }
+        }
+
+        &-very-light-yellow {
+            &:hover {
+                background-color: $color-folk-very-light-yellow !important;
             }
         }
 

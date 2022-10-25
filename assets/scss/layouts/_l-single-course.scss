@@ -1,0 +1,18 @@
+$layout-name: 'l-single-course';
+
+.#{$layout-name} {
+    &__box-image {
+        background-color: #8A1719;
+
+        img {
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+    }
+
+    &__box-content {
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        background-color: $color-folk-light-yellow;
+    }
+}

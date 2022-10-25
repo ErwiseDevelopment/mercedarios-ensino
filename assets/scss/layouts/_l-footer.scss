@@ -1,0 +1,28 @@
+$layout-name: 'l-footer';
+
+.#{$layout-name} {
+    &__box-logo {
+        width: 350px;
+        height: 175px;
+        overflow: hidden;
+        display: block;   
+
+        @media screen and (max-width: 575px) {
+            width: 280px;
+            height: 140px;
+        }
+    }
+
+    &__radius {
+        width: 350px;
+        height: 350px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: $color-folk-white;
+
+        @media screen and (max-width: 575px) {
+            width: 280px;
+            height: 280px;
+        }
+    }
+}

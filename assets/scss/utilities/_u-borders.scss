@@ -6,7 +6,7 @@ $utility-name: 'u-border';
     }
 
     &-1 {
-        border: 1px solid;
+        border: 1px solid !important;
     }
 
     &-2 {
@@ -404,6 +404,16 @@ $utility-name: 'u-border';
         &-r-2 {
             @media screen and (min-width: 1600px) {
                 border-right: 2px solid;
+            }
+        }
+    }
+}
+
+.last\: {
+    &#{$utility-name} {
+        &-none {
+            &:last-child {
+                border: none !important;
             }
         }
     }

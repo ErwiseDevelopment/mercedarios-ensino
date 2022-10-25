@@ -1,6 +1,10 @@
 $utility-name: 'u-bg';
 
 .#{$utility-name} {
+    &-contain {
+        background-size: contain !important;
+    }
+
     &-cover {
         background-size: cover !important;
     }

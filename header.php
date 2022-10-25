@@ -16,11 +16,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <!-- googlefonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
@@ -40,15 +38,19 @@
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 
+    <!-- top menu -->
+    <?php echo get_template_part( 'template-parts/content', 'top-menu' ) ?>
+    <!-- end top menu -->
+
     <!-- top info -->
     <?php echo get_template_part( 'template-parts/content', 'top-info' ) ?>
     <!-- end top info -->
 
-    <header id="masthead" class="header site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+    <header id="masthead" class="l-header site-header navbar-static-top py-3 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
         <div class="container">
 
-            <nav class="navbar navbar-expand-xl p-0">
+            <nav class="l-navbar navbar navbar-expand-xl p-0">
 
                 <div class="navbar-brand d-none">
                     <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
@@ -70,7 +72,7 @@
                 'theme_location'    => 'primary',
                 'container'       => 'div',
                 'container_id'    => 'main-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
+                'container_class' => 'collapse navbar-collapse justify-content-center',
                 'menu_id'         => false,
                 'menu_class'      => 'navbar-nav',
                 'depth'           => 3,
