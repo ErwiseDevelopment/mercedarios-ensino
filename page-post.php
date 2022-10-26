@@ -85,7 +85,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 					<?php $date_post = $data->date;
 					   list($data_year, $data_month, $data_day) = explode("-", $date_post);
 					
-					echo  $data_day . '/' . $data_month; ?>
+					echo  $data_day . '/' . $data_month . '/' . $data_year; ?>
 				</p>
 
 				<!-- <p class="mb-2">
