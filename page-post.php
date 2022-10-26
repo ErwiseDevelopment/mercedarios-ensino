@@ -166,7 +166,7 @@ style="border-top:5px solid;">
 							</a>
 						</div>
 						<?php 
-						if ( $count == 3)
+						if ( $count == 4)
 							break;		
 		
                             endif;    
