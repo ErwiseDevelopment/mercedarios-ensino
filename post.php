@@ -49,8 +49,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 		<div class="row">
 		<?php
 							//pega o id da pagina/post
-						 if( isset($_GET['post']))
-						 $id_url = $_GET['post'];
+						 if( isset($_GET['id']))
+						 $id_url = $_GET['id'];
 
 							//url principal do site
 							 $link_pattern = get_field( 'link_padrao_portal', 'option' );
