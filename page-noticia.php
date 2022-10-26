@@ -122,9 +122,9 @@ style="border-top:5px solid;">
 				<div class="row">
 
 				<?php
-                        $link_pattern = get_field( 'link_padrao_portal', 'option' );
-                        $post_link = $link_pattern . get_field( 'link_noticia', 'option' );
-                        $request_posts = wp_remote_get( $post_link );
+						$link_pattern = get_field( 'link_padrao_portal', 'option' );
+						$post_link = $link_pattern . get_field( 'link_caminho', 'option' ) . get_field( 'link_noticia', 'option' );
+						$request_posts = wp_remote_get( $post_link );
                         $count = 0;
 
                         if(!is_wp_error( $request_posts )) :
