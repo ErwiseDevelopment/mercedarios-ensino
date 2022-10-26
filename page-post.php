@@ -134,6 +134,7 @@ style="border-top:5px solid;">
                             if(!is_wp_error( $data )) :
                                 foreach( $data as $rest_post ) :
                                     if($id_url <> $rest_post->id ) :
+										$cont ++;
                     ?>
 						<div class="col-lg-3 my-3 my-lg-0">
 							<a 
@@ -163,6 +164,9 @@ style="border-top:5px solid;">
 							</a>
 						</div>
 						<?php 
+						if ( $cont ==3);
+							break;		
+		
                             endif;    
 							endforeach;
                             endif;
