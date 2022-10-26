@@ -28,7 +28,7 @@
                                         <div class="card-img">
                                             <img 
                                             class="img-fluid w-100 u-object-fit-cover"
-                                            src="<?php echo get_field( 'capa' ) ?>" 
+                                            src="<?php echo get_field( 'imagem_home' ) ?>" 
                                             alt="<?php the_title() ?>">
                                         </div>
 
