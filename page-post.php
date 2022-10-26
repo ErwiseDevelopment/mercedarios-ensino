@@ -81,11 +81,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                         alt="<?php echo $data->title->rendered; ?>">
                                 </div>
 
-				<p class="u-font-size-15 u-font-size-18 xl:u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-lato u-color-folk-bold-marron mt-3 mb-0">
+				<p class="u-font-size-15 u-font-size-18 xl:u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-lato u-color-folk-bold-marron mt-3 mb-0"> Postado em :
 					<?php $date_post = $data->date;
 					   list($data_year, $data_month, $data_day) = explode("-", $date_post);
 					   list($data_day1) = explode("T", $data_day);
-					echo $data_day1 . '/' . $data_month . '/' . $data_year; ?>
+					 echo $data_day1 . '/' . $data_month . '/' . $data_year; ?>
 				</p>
 
 				<!-- <p class="mb-2">
