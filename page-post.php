@@ -90,7 +90,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 				</p>
 
 				<h1 class="u-line-height-100 u-font-size-32 xl:u-font-size-48 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito u-color-folk-bold-marron mb-4"> 
-				<?php echo $$data->title->rendered; ?>
+				<?php echo $data->title->rendered; ?>
 				</h1>
 
 				<span class="d-block u-font-size-15 xl:u-font-size-18 xxl:u-font-size-22 u-font-weight-semibold all:u-font-family-nunito u-color-folk-dark-gray">
