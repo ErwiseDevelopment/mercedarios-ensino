@@ -48,52 +48,6 @@
 						
 						wp_reset_query();
 					?>
-
-                    <!-- <div class="col-md-6 col-lg-4 l-teaching__col-child">
-
-                        <a
-                        class="card border-0 text-decoration-none"
-                        href="#">       
-                            <div class="card-img">
-                                <img 
-                                class="img-fluid w-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/ensino-fundamental.png" 
-                                alt="Ensino Fundamental">
-                            </div>
-
-                            <div class="card-body px-5">
-
-                                <div class="l-teaching__box d-flex justify-content-center align-items-end pb-3">
-                                    <h3 class="u-font-size-22 xxl:u-font-size-28  u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white">
-                                        Ensino Fundamental
-                                    </h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 l-teaching__col-child">
-
-                        <a
-                        class="card border-0 text-decoration-none"
-                        href="#">       
-                            <div class="card-img">
-                                <img 
-                                class="img-fluid w-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/ensino-medio.png" 
-                                alt="Ensino Médio">
-                            </div>
-
-                            <div class="card-body px-5">
-
-                                <div class="l-teaching__box d-flex justify-content-center align-items-end pb-3">
-                                    <h3 class="u-font-size-22 xxl:u-font-size-28  u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white">
-                                        Ensino Médio
-                                    </h3>
-                                </div>
-                            </div>
-                        </a>
-                    </div> -->
                 </div>
             </div>
         </div>
