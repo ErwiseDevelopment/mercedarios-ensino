@@ -117,7 +117,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div class="card-img w-100">
                                     <img
                                     class="img-fluid w-100 u-object-fit-cover"
-                                    src="<?php echo $rest_post->featured_image_src; ?>"
+                                        src="<?php echo $rest_post->featured_image_src; ?>"
                                         alt="<?php echo $rest_post->title->rendered; ?>">
                                 </div>
 
@@ -125,7 +125,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 class="card-body pr-5"
                                 style="background-color:#9D1922">
                                     <h3 class="u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito u-color-folk-white">
-                                    <?php echo $rest_post->title->rendered; ?>
+                                     <?php echo $rest_post->title->rendered; ?>
                                     </h3>
                                 </div>
 

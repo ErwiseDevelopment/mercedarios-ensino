@@ -90,10 +90,24 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
         <div class="row">
 
             <!-- loop -->
-            <?php for( $i = 0; $i < 6; $i++ ) { ?>
+            <!-- ?php for( $i = 0; $i < 6; $i++ ) { ?> -->
+                <?php
+                            $link_pattern = get_field( 'link_padrao_portal', 'option' );
+                            $post_link = $link_pattern . get_field( 'link_caminho', 'option' ) . get_field( 'link_blog', 'option' );
+                            $request_posts = wp_remote_get( $post_link );;
+                        
+                        if(!is_wp_error( $request_posts )) :
+                            $body = wp_remote_retrieve_body( $request_posts );
+                            $data = json_decode( $body );
+
+                            if(!is_wp_error( $data )) :
+                                foreach( $data as $rest_post ) :
+                                    $count++;
+                                    $id = array( $rest_post->id );
+                    ?>
                 <a 
                 class="col-12 text-decoration-none my-3"
-                href="#">
+                href="<?php echo get_home_url( null, 'blogs/?id=' . $rest_post->id )  ?>">
 
                     <div 
                     class="l-blog__box pt-3 pb-3 px-3 px-lg-0"
@@ -103,20 +117,18 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             <div class="col-lg-7">
                                 <img 
                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/blog-image-1.png" 
-                                alt="Post 01">
+                                src="<?php echo $rest_post->featured_image_src; ?>"
+                                 alt="<?php echo $rest_post->title->rendered; ?>">
                             </div>
 
                             <div class="col-lg-5 pt-4 pb-5 pl-lg-0 pr-lg-5">
 
                                 <h3 class="u-font-size-22 xl:u-font-size-28 xxl:u-font-size-36 u-font-weight-bold u-font-family-nunito u-color-folk-white mt-2">
-                                    5 sinais de que você
-                                    precisa de uma escola 
-                                    infantil católica
+                                 <?php echo $rest_post->title->rendered; ?>
                                 </h3>
 
                                 <p class="u-font-size-15 xl:u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-nunito u-color-folk-white">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna nibh, blandit eu egestas efficitur, congue ut orci. Vestibulum dictum at elit id tempus. Donec at ligula feugiat, volutpat lorem a, aliquam nisl. Etiam [...]
+                                <?php echo $rest_post->excerpt->rendered; ?>
                                 </p>
 
                                 <span class="l-blog__plus">+</span>
@@ -124,7 +136,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         </div>
                     </div>
                 </a>
-            <?php } ?>
+            <?php 
+                                endforeach;
+                            endif;
+                        endif;
+                    ?>
             <!-- end loop -->
         </div>
     </div>
