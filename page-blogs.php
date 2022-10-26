@@ -32,7 +32,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                     alt="Ícone mais">
 
                     <h1 class="d-inline-block u-font-size-32 xl:u-font-size-48 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white mb-0 ml-3">
-                        Notícias
+                        Blog
                     </h1>
                 </div>
             </div>
@@ -123,7 +123,7 @@ style="border-top:5px solid;">
 
 				<?php
                         $link_pattern = get_field( 'link_padrao_portal', 'option' );
-                        $post_link = $link_pattern . get_field( 'link_noticia', 'option' );
+                        $post_link = $link_pattern . get_field( 'link_caminho', 'option' ) . get_field( 'link_blog', 'option' );
                         $request_posts = wp_remote_get( $post_link );
                         $count = 0;
 
