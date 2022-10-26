@@ -58,7 +58,7 @@
                             <img src="<?php echo get_field('logo', 'option'); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                         </a>
                   
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
+                        
                     
 
                 </div>
