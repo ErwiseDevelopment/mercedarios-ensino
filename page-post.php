@@ -135,7 +135,7 @@ style="border-top:5px solid;">
                                 foreach( $data as $rest_post ) :
                                     if($id_url <> $rest_post->id) :
 										
-										$count ++;
+										$count++;
                     ?>
 						<div class="col-lg-3 my-3 my-lg-0">
 							<a 
