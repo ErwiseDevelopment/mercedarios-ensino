@@ -15,7 +15,7 @@ style="border-top:20px solid">
 
                         <!-- swiper -->
                         <?php if(have_rows('imagem_destaque','option')) :
-                                while (have_rows('imagem_destaque','option')) : the_row();
+                                while (!empty (have_rows('imagem_destaque','option'))) : the_row();
                              ?>
                             <a 
                             class="swiper-slide"
