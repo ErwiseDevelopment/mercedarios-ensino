@@ -27,11 +27,10 @@ style="background-color:#F1F1F1">
 
                         <!-- slide -->
                         <?php
-                        $link_pattern = get_field( 'link_padrao_portal', 'option' );
-                        $post_link = $link_pattern . get_field( 'link_noticia', 'option' );
-                        $request_posts = wp_remote_get( $post_link );
-                        $count = 0;
-
+                            $link_pattern = get_field( 'link_padrao_portal', 'option' );
+                            $post_link = $link_pattern . get_field( 'link_caminho', 'option' ) . get_field( 'link_noticia', 'option' );
+                            $request_posts = wp_remote_get( $post_link );;
+                        
                         if(!is_wp_error( $request_posts )) :
                             $body = wp_remote_retrieve_body( $request_posts );
                             $data = json_decode( $body );
