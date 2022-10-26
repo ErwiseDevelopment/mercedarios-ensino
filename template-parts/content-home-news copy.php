@@ -26,39 +26,26 @@ style="background-color:#F1F1F1">
                     <div class="swiper-wrapper justify-content-start">
 
                         <!-- slide -->
-                        <?php
-                        $link_pattern = get_field( 'link_padrao_portal', 'option' );
-                        $post_link = $link_pattern . get_field( 'link_noticia', 'option' );
-                        $request_posts = wp_remote_get( $post_link );
-                        $count = 0;
-
-                        if(!is_wp_error( $request_posts )) :
-                            $body = wp_remote_retrieve_body( $request_posts );
-                            $data = json_decode( $body );
-
-                            if(!is_wp_error( $data )) :
-                                foreach( $data as $rest_post ) :
-                                    $count++;
-                                    $id = array( $rest_post->id );
-                    ?>
+                        <?php for( $i = 0; $i < 10; $i++ ) { ?>
                             <div class="swiper-slide justify-content-start">
 
                                 <a 
                                 class="card text-decoration-none"
-                                href="<?php echo get_home_url( null, 'noticias/?id=' . $rest_post->slug )  ?>">
+                                href="#">
 
                                     <div class="card-img">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php echo $rest_post->featured_image_src; ?>"
-                                        alt="<?php echo $rest_post->title->rendered; ?>">
+                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/news-image-1.png"
+                                        alt="Post 01">
                                     </div>
  
                                     <div 
                                     class="card-body"
                                     style="background-color:#871619">
                                         <h3 class="u-font-size-22 u-font-weight-bold u-font-family-nunito text-white">
-                                            <?php echo $rest_post->title->rendered; ?>
+                                            Maternal e Jardim I realizam atividade
+                                            com a temática “Companhia”
                                         </h3>
 
                                         <span 
@@ -67,11 +54,7 @@ style="background-color:#F1F1F1">
                                     </div>
                                 </a>
                             </div>
-                            <?php 
-                                endforeach;
-                            endif;
-                        endif;
-                    ?>
+                        <?php } ?>
                         <!-- end slide -->
                     </div>
                 </div>
