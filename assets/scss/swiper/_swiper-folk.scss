@@ -1,0 +1,25 @@
+.swiper-button-prev-structure-units,
+.swiper-button-next-structure-units {
+    width: 58px;
+    height: 58px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-folk-light-yellow;
+
+    &::after {
+        font-size: 1.375rem;
+        font-weight: 700;
+        color: $color-folk-dark-marron;
+    }
+}
+
+.swiper-button-prev-structure-units {
+    left: calc(50% - 300px);
+}
+
+.swiper-button-next-structure-units {
+    right: calc(50% - 300px);
+}
