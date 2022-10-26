@@ -173,6 +173,7 @@ style="border-top:5px solid;">
 							endforeach;
                             endif;
                         endif;
+						wp_reset_vars($id_url)
                     ?>
 				</div>
 			</div>
