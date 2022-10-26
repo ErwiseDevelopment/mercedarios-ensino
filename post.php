@@ -47,18 +47,39 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 	<div class="container">
 
 		<div class="row">
+		<?php
+							//pega o id da pagina/post
+						 if( isset($_GET['post']))
+						 $id_url = $_GET['post'];
+
+							//url principal do site
+							 $link_pattern = get_field( 'link_padrao_portal', 'option' );
+							// echo $link_pattern;
+							 //concatena o link pricipal+o caminho das postagens
+							$post_link = $link_pattern . "wp-json/wp/v2/posts/$id_url";
+						//	echo $post_link;
+							 //faz a requisição com o site no caminho digitado acima
+							 $request_posts = wp_remote_get( $post_link );
+							 if(!is_wp_error( $request_posts )) :
+						   $body = wp_remote_retrieve_body( $request_posts );
+						   $data = json_decode( $body );
+						//    echo "<pre>";
+						// 	var_dump($data);
+						// 	echo "</pre>";
+						   if(!is_wp_error( $data )) :
+							//    foreach( $data as $rest_post ) :
+		
+								
+		?>
 
 			<div class="col-12">
 
-				<?php
-					$alt_title = get_the_title();
-
-					the_post_thumbnail( 'post-thumbnail',
-						array(
-							'class' => 'img-fluid w-100 u-object-fit-cover',
-							'alt'   => $alt_title
-						));
-				?>
+								<div class="card-img w-100">
+                                    <img
+                                    class="img-fluid w-100 u-object-fit-cover"
+                                    src="<?php echo $data->featured_image_src; ?>"
+                                        alt="<?php echo $data->title->rendered; ?>">
+                                </div>
 
 				<p class="u-font-size-15 u-font-size-18 xl:u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-lato u-color-folk-bold-marron mt-3 mb-0">
 					15 de março, 2022
@@ -69,13 +90,15 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 				</p>
 
 				<h1 class="u-line-height-100 u-font-size-32 xl:u-font-size-48 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito u-color-folk-bold-marron mb-4"> 
-					<?php the_title() ?>
+				<?php echo $$data->title->rendered; ?>
 				</h1>
 
 				<span class="d-block u-font-size-15 xl:u-font-size-18 xxl:u-font-size-22 u-font-weight-semibold all:u-font-family-nunito u-color-folk-dark-gray">
-					<?php the_content() ?>
+					<?php echo $data->content->rendered;  ?>
 				</span>
 			</div>
+			<?php endif;
+			endif;?>
 		</div>
 	</div>
 </section>
