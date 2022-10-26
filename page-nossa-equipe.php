@@ -57,7 +57,25 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                 <div class="row">
 
                     <!-- loop -->
-                    <?php for( $i = 0; $i < 12; $i++ ) { ?>
+                    <?php 
+                        $args = array(
+                            'posts_per_page' => -1,
+                            'post_type'      => 'equipe',
+                            'order'          =>'DESC' ,
+                            // 'tax_query'      => array(
+                            //     array(
+                            //         'taxonomy' => 'areas',
+                            //         'field'    => 'slug',
+                            //         //'terms'  => array( $editorial_slug_current )
+                            //     )
+                            // )
+                        );
+                        
+                        $equipe = new WP_Query($args);
+
+                        if($equipe -> have_posts()) :
+                            while ($equipe -> have_posts()) : $equipe -> the_post();
+                    ?>
                         <div class="col-md-6 my-3">
 
                             <div class="card border-0">
@@ -65,7 +83,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div class="card-img px-4">
                                     <img
                                     class="img-fluid w-100 h-100 u-object-fit-cover"
-                                    src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/team-image-1.png"
+                                    src="<?php echo get_the_post_thumbnail()?>"
                                     alt="Foto 01">
                                 </div>
 
@@ -73,22 +91,34 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                                     <div class="l-team__box-title py-3 px-4">
                                         <h4 class="u-font-size-18 xl:u-font-size-22 xxl:u-font-size-26 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white">
-                                            FREI JOCIEL BATISTA
-                                            DE CARVALHO, O. DE M.
+                                            
+                                            <?php echo the_title()?>
                                         </h4>
                                     </div>
 
                                     <div class="mt-n3 pl-3 pl-lg-5">
                                         <div class="l-team__box-office py-3">
                                             <p class="u-font-size-15 xl:u-font-size-18 xxl:u-font-size-20 u-font-weight-extrabold u-font-family-nunito text-center text-uppercase u-color-folk-bold-marron mb-0">
-                                                Representante da Mantenedora
+                                                
+                                                <?php
+                                                        $categoria = get_the_terms( get_the_ID(), 'areas' );
+
+                                                        foreach( $categoria as $category ) :
+                                                            echo $category->name;
+                                                        endforeach;
+
+                                                    // "/n";
+                                                    
+                                                    // echo var_dump($post_categories)
+                                                    ?>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php endwhile;
+                    endif; ?>
                     <!-- end loop -->
                 </div>
             </div>
