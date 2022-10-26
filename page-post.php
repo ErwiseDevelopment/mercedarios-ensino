@@ -133,8 +133,8 @@ style="border-top:5px solid;">
 
                             if(!is_wp_error( $data )) :
                                 foreach( $data as $rest_post ) :
-                                    if($id_url <> $rest_post->id ) :
-										$cont = 0;
+                                    if($id_url <> $rest_post->id && $cont = 0) :
+										
 										$cont ++;
                     ?>
 						<div class="col-lg-3 my-3 my-lg-0">
