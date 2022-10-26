@@ -15,7 +15,8 @@ style="border-top:20px solid">
 
                         <!-- swiper -->
                         <?php if(have_rows('imagem_destaque','option')) :
-                                while (!empty (have_rows('imagem_destaque','option'))) : the_row();
+                                while (have_rows('imagem_destaque','option')) : the_row();
+                                 if(!empty(get_sub_field('banner_repetidor', 'option'))) :
                              ?>
                             <a 
                             class="swiper-slide"
@@ -25,7 +26,7 @@ style="border-top:20px solid">
                                 src="<?php echo get_sub_field('banner_repetidor', 'option')?>"
                                 alt="Banner">
                             </a>
-                        <?php endwhile; endif;?>
+                        <?php endif; endwhile; endif;?>
                         <!-- end swiper -->
                     </div>
                 </div>
