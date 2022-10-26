@@ -106,8 +106,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                             if(!is_wp_error( $data )) :
                                 foreach( $data as $rest_post ) :
-                                    $count++;
-                                    $id = array( $rest_post->id );
+                                    
                     ?>
                         <div class="col-lg-4 my-3">
 

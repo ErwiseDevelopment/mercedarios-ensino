@@ -121,26 +121,37 @@ style="border-top:5px solid;">
 
 				<div class="row">
 
-					<?php for( $i = 0; $i < 4; $i++ ) { ?>
+				<?php
+                        $link_pattern = get_field( 'link_padrao_portal', 'option' );
+                        $post_link = $link_pattern . get_field( 'link_noticia', 'option' );
+                        $request_posts = wp_remote_get( $post_link );
+                        $count = 0;
+
+                        if(!is_wp_error( $request_posts )) :
+                            $body = wp_remote_retrieve_body( $request_posts );
+                            $data = json_decode( $body );
+
+                            if(!is_wp_error( $data )) :
+                                foreach( $data as $rest_post ) :
+                                    if($id_url <> $rest_post->id ) :
+                    ?>
 						<div class="col-lg-3 my-3 my-lg-0">
 							<a 
 							class="card border-0 rounded-0 text-decoration-none"
-							href="#">
+							href="<?php echo get_home_url( null, 'post/?id=' . $rest_post->id )  ?>">
 
 								<div class="card-img w-100">
 									<img
 									class="img-fluid w-100 u-object-fit-cover"
-									src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/post-image-1.png"
-									alt="Post Image 1">
+									src="<?php echo $rest_post->featured_image_src; ?>"
+                                     alt="<?php echo $rest_post->title->rendered; ?>">
 								</div>
 
 								<div 
 								class="card-body pr-5"
 								style="background-color:#9D1922">
 									<h3 class="u-font-size-14 xxl:u-font-size-18 u-font-weight-bold u-font-family-nunito u-color-folk-white">
-										Maternal e Jardim I realizam
-										atividade com a temática 
-										“Companhia”
+										<?php echo $rest_post->title->rendered; ?>
 									</h3>
 								</div>
 
@@ -151,7 +162,12 @@ style="border-top:5px solid;">
 								</span>
 							</a>
 						</div>
-					<?php } ?>
+						<?php 
+                            endif;    
+							endforeach;
+                            endif;
+                        endif;
+                    ?>
 				</div>
 			</div>
 		</div>
