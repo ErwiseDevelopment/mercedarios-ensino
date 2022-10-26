@@ -7,7 +7,7 @@ function single_create_post_type() {
 		'public' 	  => true,
 		'has_archive' => true,
 		'menu_icon'	  => 'dashicons-welcome-learn-more',
-		'supports' 	  => array( 'title', 'editor',  'thumbnail', 'revisions', 'author' ) 
+		'supports' 	  => array( 'title' ) 
 	));
 
 	register_post_type( 'Galeria', array(
