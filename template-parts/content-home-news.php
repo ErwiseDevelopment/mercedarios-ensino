@@ -45,7 +45,7 @@ style="background-color:#F1F1F1">
 
                                 <a 
                                 class="card text-decoration-none"
-                                href="<?php echo get_home_url( null, 'post/?id=' . $rest_post->id )  ?>">
+                                href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
 
                                     <div class="card-img">
                                         <img

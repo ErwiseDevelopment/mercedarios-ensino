@@ -112,7 +112,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                             <a 
                             class="card border-0 rounded-0 text-decoration-none"
-                            href="<?php echo get_home_url( null, 'post/?id=' . $rest_post->id )  ?>">
+                            href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
 
                                 <div class="card-img w-100">
                                     <img
