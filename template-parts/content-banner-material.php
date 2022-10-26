@@ -14,16 +14,18 @@ style="border-top:20px solid">
                     <div class="swiper-wrapper">
 
                         <!-- swiper -->
-                        <?php for( $i = 0; $i < 3; $i++ ) { ?>
+                        <?php if(!empty(get_field('imagem_destaque','option'))) :
+                                
+                             ?>
                             <a 
                             class="swiper-slide"
-                            href="#">
+                            href="<?php echo get_sub_field('link_repetdor', 'option')?>">
                                 <img 
                                 class="img-fluid w-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-1.png" 
+                                src="<?php echo get_sub_field('banner_repetidor', 'option')?>"
                                 alt="Banner">
                             </a>
-                        <?php } ?>
+                        <?php endif;?>
                         <!-- end swiper -->
                     </div>
                 </div>
