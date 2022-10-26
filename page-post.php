@@ -82,15 +82,16 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 </div>
 
 				<p class="u-font-size-15 u-font-size-18 xl:u-font-size-22 xxl:u-font-size-28 u-font-weight-bold u-font-family-lato u-color-folk-bold-marron mt-3 mb-0">
-					15 de março, 2022
+					<?php echo $data->date; ?>
 				</p>
 
-				<p class="mb-2">
-					<span class="u-font-size-22 xl:u-font-size-28 xxl:u-font-size-36 u-font-weight-bold u-font-family-lato u-color-folk-very-gray">Por:</span> <span class="u-font-size-18 xl:u-font-size-24 xxl:u-font-size-30 u-font-weight-regular u-font-family-lato u-color-folk-bold-marron">Secretaria</span>
-				</p>
+				<!-- <p class="mb-2">
+					<span class="u-font-size-22 xl:u-font-size-28 xxl:u-font-size-36 u-font-weight-bold u-font-family-lato u-color-folk-very-gray">
+						Por:</span> <span class="u-font-size-18 xl:u-font-size-24 xxl:u-font-size-30 u-font-weight-regular u-font-family-lato u-color-folk-bold-marron">Secretaria</span>
+				</p> -->
 
 				<h1 class="u-line-height-100 u-font-size-32 xl:u-font-size-48 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito u-color-folk-bold-marron mb-4"> 
-				<?php echo $data->title->rendered; ?>
+					<?php echo $data->title->rendered; ?>
 				</h1>
 
 				<span class="d-block u-font-size-15 xl:u-font-size-18 xxl:u-font-size-22 u-font-weight-semibold all:u-font-family-nunito u-color-folk-dark-gray">
