@@ -70,7 +70,7 @@
                                 <ul class="mb-0 pl-0">
                                             <?php
                                                 $args = array(
-                                                    'posts_per_page' => 7   ,
+                                                    'posts_per_page' => 7,
                                                     'post_type'      => 'curso',
                                                     'order'          => 'ASC'
                                                 );
