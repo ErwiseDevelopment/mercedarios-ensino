@@ -29,7 +29,7 @@
                     <div class="col-lg-3">
 
                         <div class="row">
-                        <?php if (!empty(get_field('facebook_redes', 'option'))):{?>
+                        <?php if (!empty(get_field('acesso_restrito', 'option'))):{?>
                             <div class="col-12 mb-4 mb-lg-2 px-5">
                                 <a
                                 class="w-100 d-block u-font-size-14 u-font-weight-bold u-font-fmaily-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-very-light-yellow py-2"
