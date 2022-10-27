@@ -21,7 +21,7 @@
                 <div class="row justify-content-center">
 
                     <a 
-                    class="l-our-differences__col"
+                    class="l-our-differences__col a:hover"
                     href="#">
 
                         <div class="l-our-differences__item">
