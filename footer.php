@@ -154,7 +154,7 @@
                                     Spotify
                                 </a>
                             </li>
-                            <?php } else: endif;?>   
+                            <?php }  endif;?>   
                                 <?php if (!empty(get_field('facebook_redes', 'option'))):{?>        
                             <li class="u-list-style-none pr-2">
                                  <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white"  rel="noreferrer noopener"
@@ -163,7 +163,7 @@
                                     Facebook
                                 </a>
                             </li>
-                             <?php } else: endif;?>     
+                             <?php } endif;?>     
                              <?php if (!empty(get_field('instagram_redes', 'option'))):{?>  
                             <li class="u-list-style-none pr-2">
                                  <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram  rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white"  rel="noreferrer noopener"
@@ -172,7 +172,7 @@
                                     Instagram
                                 </a>
                             </li>
-                            <?php } else: endif;?>   
+                            <?php }endif;?>   
                             <?php if (!empty(get_field('youtube_redes', 'option'))):{?>       
                             <li class="u-list-style-none pr-2">
                                  <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white" rel="noreferrer noopener"
@@ -184,11 +184,12 @@
                             <?php if (!empty(get_field('whatsapp_redes', 'option'))):{?>       
                             <li class="u-list-style-none">
                                 <a 
-                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white" rel="noreferrer noopener"                                href="<?php echo get_field('whatsapp_redes', 'option')?>" <?php if (get_field('nova_guia_wpp', 'option') == '1') :?>  target="_blank" <?php endif; ?> rel="noreferrer noopener">
+                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white" rel="noreferrer noopener"                                
+                                href="<?php echo get_field('whatsapp_redes', 'option')?>" <?php if (get_field('nova_guia_wpp', 'option') == '1') :?>  target="_blank" <?php endif; ?> rel="noreferrer noopener">
                                     Whatsapp
                                 </a>
                             </li>
-                            <?php } else: endif;?>   
+                            <?php } endif;?>   
                         </ul>
                 </div>
             </div>
