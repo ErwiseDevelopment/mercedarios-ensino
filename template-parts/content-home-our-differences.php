@@ -49,7 +49,7 @@
                     <div class="col-10 col-lg-4 mt-5 pt-4">
                         <a
                         class="w-100 rounded-pill d-block u-font-size-16 lg:u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-bold-marron hover:u-color-folk-white u-bg-folk-light-yellow hover:u-bg-folk-dark-marron py-2"
-                        href="<?php get_field('link_visita')?>">
+                        href="<?php echo get_field('link_visita')?>">
                             Quero fazer uma visita
                         </a>
                     </div>
