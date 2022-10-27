@@ -20,12 +20,12 @@
                                     if( $galeries->have_posts() ) :
                                         while( $galeries->have_posts() ) : $galeries->the_post();
                         ?>   
-                    <?php for( $i = 0; $i < 4; $i++ ) { ?>
+                    <!-- <php for( $i = 0; $i < 4; $i++ ) { ?> -->
                         <div class="col-lg-3 l-photos__col-child">
 
                             <div class="row">
 
-                                <?php for( $j = 0; $j < 2; $j++ ) { ?>
+                                <!-- <php for( $j = 0; $j < 2; $j++ ) { ?> -->
                                     <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
                                         <a 
                                         class="l-photos__overlay"
@@ -36,10 +36,10 @@
                                             alt="<?php the_title() ?>">
                                         </a>
                                     </div>
-                                <?php } ?>
+                                <!--?php } ?> -->
                             </div>
                         </div>
-                    <?php } ?>
+                    <!--?php } ?> -->
                     <?php
                                 endwhile;
                             endif;
