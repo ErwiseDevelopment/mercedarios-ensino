@@ -55,7 +55,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 					<div class="col-6 pr-0">
 
 						<div class="l-single-course__box-image">
-							<?php echo get_field( 'imagem_destaque_curso' ) ?>
+						<img 
+                                            class="img-fluid w-100 u-object-fit-cover"
+                                            src="<?php echo get_field( 'imagem_destaque_curso' ) ?>" 
+                                            alt="<?php the_title() ?>">
+                                        
 						</div>
 					</div>
 
