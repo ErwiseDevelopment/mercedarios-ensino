@@ -10,8 +10,8 @@
                 <div class="row">
                         <?php
                                     $args = array(
-                                        'posts_per_page' => 3,
-                                        'post_type'      => 'album',
+                                        'posts_per_page' => 8,
+                                        'post_type'      => 'galeria',
                                         'order'          => 'DESC'
                                     );
 
