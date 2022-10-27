@@ -55,15 +55,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 					<div class="col-6 pr-0">
 
 						<div class="l-single-course__box-image">
-							<?php
-								$alt_title = get_the_title();
-
-								the_post_thumbnail( 'post-thumbnail',
-									array(
-										'class' => 'img-fluid w-100 u-object-fit-cover',
-										'alt'   => $alt_title
-									));
-							?>
+							<?php echo get_field( 'imagem_destaque_curso' ) ?>
 						</div>
 					</div>
 
@@ -75,7 +67,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 							</h1>
 
 							<span class="d-block u-font-size-16 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold all:u-font-family-nunito u-color-folk-dark-gray">
-								<?php echo get_field( 'descricao' ) ?>
+								<?php echo get_field( 'resumo_cursos' ) ?>
 							</span>
 						</div>
 					</div>
@@ -85,7 +77,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 			<div class="col-12 mt-4">
 
 				<span class="d-block u-font-size-16 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold all:u-font-family-nunito u-color-folk-dark-gray">
-					<?php the_content() ?>
+				<?php echo get_field( 'descricao_curso' ) ?>
 				</span>
 			</div>
 		</div>
@@ -144,7 +136,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 										<div class="card-img">
 											<img 
 											class="img-fluid w-100 u-object-fit-cover"
-											src="<?php echo get_field( 'capa' ) ?>" 
+											src="<?php echo get_field( 'imagem_home' ) ?>" 
 											alt="<?php the_title() ?>">
 										</div>
 
