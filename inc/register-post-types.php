@@ -18,13 +18,13 @@ function single_create_post_type() {
 		 	'supports' 		=> array( 'title', 'thumbnail' ) 
 		 ) );
 
-	// register_post_type( 'estrutura', array(
-	// 	'labels' 		=> array( 'name' => 'Estrutura', 'singular_name' => 'Estrutura', 'all_items' => 'Todas Estruturas' ),
-	// 	'public' 		=> true,
-	// 	'has_archive'	=> true,
-	// 	'menu_icon'		=> 'dashicons-building',
-	// 	'supports' 		=> array( 'title', 'thumbnail' ) 
-	// ) );
+	register_post_type( 'estrutura', array(
+		'labels' 		=> array( 'name' => 'Estrutura', 'singular_name' => 'Estrutura', 'all_items' => 'Todas Estruturas' ),
+		'public' 		=> true,
+		'has_archive'	=> true,
+		'menu_icon'		=> 'dashicons-building',
+		'supports' 		=> array( 'title', 'thumbnail' ) 
+	) );
 }
 add_action( 'init', 'single_create_post_type' );
 
