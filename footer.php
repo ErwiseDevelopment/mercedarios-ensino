@@ -68,46 +68,31 @@
                             <div class="d-flex">
 
                                 <ul class="mb-0 pl-0">
+                                            <?php
+                                                $args = array(
+                                                    'posts_per_page' => 4,
+                                                    'post_type'      => 'curso',
+                                                    'order'          => 'ASC'
+                                                );
 
+                                                $other_posts = new WP_Query( $args );
+
+                                                if( $other_posts->have_posts()) :
+                                                    while( $other_posts->have_posts()) : $other_posts->the_post();
+                                            ?>
                                     <li class="u-list-style-none mb-2">
                                         <a 
                                         class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white"
-                                        href="#">
-                                            Educação Infantil
+                                        href="<?php the_permalink()?>">
+                                            <?php the_title()?>
                                         </a>
                                     </li>
-
-                                    <li class="u-list-style-none mb-2">
-                                        <a 
-                                        class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white"
-                                        href="#">
-                                            Ensino Fundamental
-                                        </a>
-                                    </li>
-
-                                    <li class="u-list-style-none mb-2">
-                                        <a 
-                                        class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white"
-                                        href="#">
-                                            Ensino Médio
-                                        </a>
-                                    </li>
-
-                                    <li class="u-list-style-none mb-2">
-                                        <a 
-                                        class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white"
-                                        href="#">
-                                            Intracurricular
-                                        </a>
-                                    </li>
-
-                                    <li class="u-list-style-none mb-2">
-                                        <a 
-                                        class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white"
-                                        href="#">
-                                            Extracurricular
-                                        </a>
-                                    </li>
+                                    <?php
+							endwhile;
+						endif;
+						
+						wp_reset_query();
+					?>
                                 </ul>
                             </div>
                         </div>
