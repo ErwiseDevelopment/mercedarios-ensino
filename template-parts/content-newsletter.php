@@ -76,12 +76,12 @@
                                 </span>
                             </div>
                             <?php $instagram = get_field('instagram_redes', 'option');
-                            list($http, $user) = explode("/", $instagram);
+                            list($http, $null , $user) = explode("/", $instagram);
                             
                             ?>
                             <div class="pl-2">
                                 <p class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-nunito u-color-folk-bold-marron mb-0">
-                                    @ . <?php echo  $http?>
+                                    @ . <?php echo  $user?>
                                 </p>
 
                                 <p class="u-font-size-15 xxl:u-font-size-18 u-font-weight-regular u-font-family-nunito u-color-folk-very-gray mb-0">
