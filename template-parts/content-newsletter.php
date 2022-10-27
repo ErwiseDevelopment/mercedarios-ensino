@@ -76,7 +76,7 @@
                                 </span>
                             </div>
                             <?php $instagram = get_field('instagram_redes');
-                            list($user) = explode('/', $instagram)
+                            list($user) = explode("/", $instagram)
                             
                             ?>
                             <div class="pl-2">
