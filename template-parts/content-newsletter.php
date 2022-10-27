@@ -75,7 +75,7 @@
                                     Link do icon__instagram
                                 </span>
                             </div>
-                            <?php $instagram = get_field('instagram_redes');
+                            <?php $instagram = get_field('instagram_redes', 'option');
                             list($user) = explode("/", $instagram)
                             
                             ?>
