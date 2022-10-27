@@ -40,20 +40,5 @@ function ed_create_page() {
                 'icon_url'   => 'dashicons-rest-api',
         ));
     }
-    register_post_type( 'equipe', array(
-		'labels' 		=> array( 'name' => 'Equipe', 'singular_name' => 'Equipe', 'all_items' => 'Equipe' ),
-		'public' 		=> true,
-		'has_archive' 	=> true,
-		'menu_icon' 	=> 'dashicons-businessperson',
-		'supports' 		=> array( 'title',  'thumbnail',  )
-	) );
-}
-add_action( 'init', 'ed_create_page' );
-
-//Criar taxonomia:
-function erwise_create_taxonomy() {
-
-	register_taxonomy( 'areas', 'equipe', array( 'labels' => array( 'name' => 'Cargo', 'singular_name' => 'Cargo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
-add_action( 'init', 'erwise_create_taxonomy' );

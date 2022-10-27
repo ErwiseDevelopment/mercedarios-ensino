@@ -25,13 +25,24 @@ function single_create_post_type() {
 		'menu_icon'		=> 'dashicons-building',
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
+
+	register_post_type( 'equipe', array(
+		'labels' 		=> array( 'name' => 'Equipe', 'singular_name' => 'Equipe', 'all_items' => 'Equipe' ),
+		'public' 		=> true,
+		'has_archive' 	=> true,
+		'menu_icon' 	=> 'dashicons-businessperson',
+		'supports' 		=> array( 'title',  'thumbnail',  )
+	) );
 }
+add_action( 'init', 'ed_create_page' );
+
 add_action( 'init', 'single_create_post_type' );
 
 
 function erwise_create_taxonomy() {
 	register_taxonomy( 'ambiente', 'estrutura', array( 'labels' => array( 'name' => 'Ambientes', 'singular_name' => 'Cidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'unidade', 'estrutura', array( 'labels' => array( 'name' => 'Unidades', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'areas', 'equipe', array( 'labels' => array( 'name' => 'Cargo', 'singular_name' => 'Cargo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
 add_action( 'init', 'erwise_create_taxonomy' );
