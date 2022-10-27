@@ -29,11 +29,11 @@
                                     <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
                                         <a 
                                         class="l-photos__overlay"
-                                        href="<?php the_permalink() ?>">
+                                        href="#">
                                             <img
                                             class="img-fluid w-100 h-100 u-object-fit-cover"
-                                            src="<?php echo get_field( 'capa_do_album' ) ?>"
-                                            alt="<?php the_title() ?>">
+                                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
+                                            alt="">
                                         </a>
                                     </div>
                                 <?php } ?>

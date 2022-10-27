@@ -52,8 +52,7 @@
 
                         <div class="l-our-differences__item">
                             <h4 class="u-font-size-22 xxl:u-font-size-24 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-dark-marron">
-                                Cursos
-                                Técnicos
+                                Cursos Técnicos
                             </h4>
                         </div>
                     </a>
@@ -107,7 +106,7 @@
 
                         <div class="l-our-differences__item">
                             <h4 class="u-font-size-22 xxl:u-font-size-24 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-dark-marron">
-                                Aula de Música
+                            Aula de Informática
                             </h4>
                         </div>
                     </a>
