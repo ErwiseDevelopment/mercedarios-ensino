@@ -33,7 +33,7 @@
                             <div class="col-12 mb-4 mb-lg-2 px-5">
                                 <a
                                 class="w-100 d-block u-font-size-14 u-font-weight-bold u-font-fmaily-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-very-light-yellow py-2"
-                                href="<?php echo get_field('acesso_restrito')?>" <?php if (get_field('nova_guia_acesso', 'option') == '1') :?>  target="_blank" <?php endif; ?>
+                                href="<?php echo get_field('acesso_restrito')?>" <?php if (get_field('nova_guia_acesso', 'option') == '1') :?>  target="_blank" <?php endif; ?> >
                                     Acesso Restrito
                                 </a>
                             </div>
