@@ -28,9 +28,10 @@ function single_create_post_type() {
 }
 add_action( 'init', 'single_create_post_type' );
 
+
 function erwise_create_taxonomy() {
-	register_taxonomy( 'ambientes', 'estrutura', array( 'labels' => array( 'name' => 'Ambientes', 'singular_name' => 'Ambientes' ), 'hierarchical' => true, 'show_admin_column' => true ) );
-	//register_taxonomy( 'unidades', 'estrutura', array( 'labels' => array( 'name' => 'Unidades', 'singular_name' => 'Unidades' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'ambiente', 'estrutura', array( 'labels' => array( 'name' => 'Ambientes', 'singular_name' => 'Cidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'unidade', 'estrutura', array( 'labels' => array( 'name' => 'Unidades', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
 add_action( 'init', 'erwise_create_taxonomy' );
