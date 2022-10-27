@@ -67,7 +67,7 @@
 
                         <a
                         class="d-flex align-items-center text-decoration-none mb-4"
-                        href="#">
+                        href="<?php echo get_field('instagram_redes', 'option');?>">
                             <div>
                                 <span 
                                 class="u-icon__brands u-icon__instagram shadow-sm rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-32 text-decoration-none u-color-folk-white u-bg-folk-bold-marron"
@@ -76,7 +76,7 @@
                                 </span>
                             </div>
                             <?php $instagram = get_field('instagram_redes', 'option');
-                            list($http, $null , $user) = explode("/", $instagram);
+                            list($http, $null , $url, $user) = explode("/", $instagram);
                             
                             ?>
                             <div class="pl-2">
