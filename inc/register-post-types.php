@@ -17,7 +17,7 @@ function single_create_post_type() {
 		 	'menu_icon'		=> 'dashicons-images-alt2',
 		 	'supports' 		=> array( 'title', 'thumbnail' ) 
 		 ) );
-
+if(get_field('estrutura', 'option') == '1'):{
 	register_post_type( 'estrutura', array(
 		'labels' 		=> array( 'name' => 'Estrutura', 'singular_name' => 'Estrutura', 'all_items' => 'Todas Estruturas' ),
 		'public' 		=> true,
@@ -25,7 +25,8 @@ function single_create_post_type() {
 		'menu_icon'		=> 'dashicons-building',
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
-
+	}; endif;
+	
 	register_post_type( 'equipe', array(
 		'labels' 		=> array( 'name' => 'Equipe', 'singular_name' => 'Equipe', 'all_items' => 'Equipe' ),
 		'public' 		=> true,
