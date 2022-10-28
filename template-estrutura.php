@@ -87,17 +87,24 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                             <div class="row">
 
-                                <?php for( $j = 0; $j < 2; $j++ ) { ?>
-                                    <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
-                                        <a 
-                                        class="l-photos__overlay"
-                                        href="#">
-                                            <img
-                                            class="img-fluid w-100 h-100 u-object-fit-cover"
-                                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
-                                            alt="">
-                                        </a>
-                                    </div>
+                                <?php 
+                                    $count = -1;
+                                    
+                                    for( $j = 0; $j < 2; $j++ ) { 
+                                        $count++
+                                ?>
+                                        <div 
+                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0" 
+                                        data-value="<?php echo $count; ?>">
+                                            <a 
+                                            class="l-photos__overlay"
+                                            href="#">
+                                                <img
+                                                class="img-fluid w-100 h-100 u-object-fit-cover"
+                                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
+                                                alt="">
+                                            </a>
+                                        </div>
                                 <?php } ?>
                             </div>
                         </div>
@@ -134,6 +141,52 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
         </div>
     </div>
 </section>
+
+<!-- modal photos -->
+<div class="l-modal-photos d-flex justify-content-center align-items-center js-modal-photos">
+    
+    <div class="l-modal-photos__overlay js-modal-photos-overlay"></div>
+    <span class="l-modal-photos__close js-modal-photos-close">x</span>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-10 col-lg-8">
+
+                <!-- swiper -->
+                <div class="swiper-container js-swiper-modal-photos">
+
+                    <div class="swiper-wrapper">
+                        
+                        <!-- slide -->
+                        <?php
+                            if( $images ) :
+                                foreach( $images as $image ) :
+                        ?>
+                                    <div class="swiper-slide">
+                                        <img
+                                        class="l-modal-photos__image img-fluid w-100"
+                                        src="<?php echo $image[ 'url' ]; ?>"
+                                        alt="<?php the_title() ?>">
+                                    </div>
+                        <?php
+                                endforeach;
+                            endif;
+                        ?>
+                        <!-- end slide -->
+                    </div>
+                </div>
+
+                <!-- arrows -->
+                <div class="swiper-button-prev swiper-button-prev-modal-photos u-color-folk-white js-swiper-button-prev-modal-photos"></div>
+                <div class="swiper-button-next swiper-button-next-modal-photos js-swiper-button-next-modal-photos"></div>
+                <!-- end swiper -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal photos -->
 
 <!-- banner material -->
 <?php echo get_template_part( 'template-parts/content', 'banner-material' ) ?>
