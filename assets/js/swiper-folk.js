@@ -122,3 +122,27 @@ const swiperPhotos = new Swiper( '.js-swiper-photos', {
     disableOnInteraction: false
   }
 })
+
+const swiperActivitiesAll = document.getElementsByClassName('js-swiper-activities-all')
+
+for(let i = 0; i < swiperActivitiesAll.length; i++ ) {
+  let swiperActivities = new Swiper( `.js-swiper-activities-${i}`, {
+    slidesPerView: 3,
+    loop: true,
+
+    navigation: {
+      prevEl: `.js-swiper-button-prev-activities-${i}`,
+      nextEl: `.js-swiper-button-next-activities-${i}`
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+
+      992: {
+        slidesPerView: 3
+      }
+    }
+  })
+}

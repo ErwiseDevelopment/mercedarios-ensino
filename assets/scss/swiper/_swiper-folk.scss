@@ -1,5 +1,7 @@
 .swiper-button-prev-structure-units,
-.swiper-button-next-structure-units {
+.swiper-button-next-structure-units,
+.swiper-button-prev-activities,
+.swiper-button-next-activities {
     width: 58px;
     height: 58px;
     overflow: hidden;
@@ -22,4 +24,22 @@
 
 .swiper-button-next-structure-units {
     right: calc(50% - 300px);
+}
+
+.swiper-button-prev-activities {
+    left: -1rem;
+
+    @media screen and (max-width: 991px) {
+        top: 100%;
+        left: 5rem;
+    }
+}
+
+.swiper-button-next-activities {
+    right: -1rem;
+
+    @media screen and (max-width: 991px) {
+        top: 100%;
+        right: 5rem;
+    }
 }

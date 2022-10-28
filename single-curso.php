@@ -55,11 +55,10 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 					<div class="col-6 pr-0">
 
 						<div class="l-single-course__box-image">
-						<img 
-                                            class="img-fluid w-100 u-object-fit-cover"
-                                            src="<?php echo get_field( 'imagem_destaque_curso' ) ?>" 
-                                            alt="<?php the_title() ?>">
-                                        
+							<img 
+							class="img-fluid w-100 u-object-fit-cover"
+							src="<?php echo get_field( 'imagem_destaque_curso' ) ?>" 
+							alt="<?php the_title() ?>">               
 						</div>
 					</div>
 
@@ -79,9 +78,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 			</div>
 
 			<div class="col-12 mt-4">
-
 				<span class="d-block u-font-size-16 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold all:u-font-family-nunito u-color-folk-dark-gray">
-				<?php echo get_field( 'descricao_curso' ) ?>
+					<?php echo get_field( 'descricao_curso' ) ?>
 				</span>
 			</div>
 		</div>
