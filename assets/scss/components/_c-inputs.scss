@@ -1,0 +1,31 @@
+$component-name: 'c-input';
+
+.#{$component-name} {
+    &-submit-float {
+        width: 100%;
+        top: calc(100% + 20px);
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .4s;
+        outline: 0;
+        border: 0;
+        border-radius: 50rem;   
+        position: absolute;
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 700;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        color: $color-folk-dark-marron;
+        background-color: $color-folk-yellow;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.5rem;
+        }
+        
+        &:hover {
+            color: $color-folk-yellow;
+            background-color: $color-folk-dark-marron;
+        }
+    }
+}

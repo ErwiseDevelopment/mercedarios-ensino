@@ -111,6 +111,12 @@ $utility-name: 'u-color-folk';
             }
         }   
 
+        &-yellow {
+            &:hover {
+                color: $color-folk-yellow !important;
+            }
+        }
+
         &-white {
             &:hover {
                 color: $color-folk-white !important;
