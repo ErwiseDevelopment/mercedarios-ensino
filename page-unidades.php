@@ -96,7 +96,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
         </div>
     </div>
 </section>
-<?php }; else: echo get_template_part( 'sem-acesso.php' ); endif;?>
+<?php }; else: echo get_template_part( 'sem-acesso' ); endif;?>
 <!-- end units -->
 
 <!-- banner material -->
