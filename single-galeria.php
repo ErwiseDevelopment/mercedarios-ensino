@@ -25,7 +25,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
             <div class="col-12 px-0">
                 <h1 class="l-template-content__banner__title position-relative u-font-weight-bold u-font-family-cinzel-decorative text-center u-color-folk-white pb-4">
-                    GALERIA
+                    <?php the_title() ?>
                 </h1>
             </div>
         </div>
