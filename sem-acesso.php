@@ -22,7 +22,7 @@ get_header(); ?>
 
 				<h1 class="l-error__title u-line-height-100 u-font-weight-bold text-center text-uppercase mb-5">
 					Erro <br>
-					<span class="l-error__number">404</span>
+					<span class="l-error__number">403</span>
 				</h1>
 
 				<p class="l-error__text u-font-weight-bold text-center">

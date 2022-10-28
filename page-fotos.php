@@ -81,13 +81,13 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                             'posts_per_page' => -1,
                             'post_type'      => 'galeria',
                             'order'          => 'DESC',
-                            'tax_query'      => array(
-                                array(
-                                    'taxonomy' => 'galeria-categoria',
-                                    'field'    => 'slug',
-                                    'terms'    => array($image_current)
-                                )
-                            )
+                            // 'tax_query'      => array(
+                            //     array(
+                            //         'taxonomy' => 'galeria-categoria',
+                            //         'field'    => 'slug',
+                            //         'terms'    => array($image_current)
+                            //     )
+                            // )
                         );
 
                         $galleries = new WP_Query( $args );
