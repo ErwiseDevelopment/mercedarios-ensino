@@ -19,6 +19,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+!-- banner -->
 <section 
 class="l-template-content__banner d-flex justify-content-center align-items-center u-bg-cover u-bg-no-repeat"
 style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/template-content-banner.png)">
@@ -35,6 +36,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
         </div>
     </div>
 </section>
+<!-- end banner -->
 <section class="mb-5">
 
     <div class="container-fluid">
