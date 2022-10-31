@@ -109,9 +109,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div class="swiper-wrapper">
                                 <?php
                         $images = get_field( 'galeria_curso_extra' );
-                        $count = -1;
+                        $count = 0;
 
-                        if( $images ) :
+                        if( $images < 6) :
                             foreach( $images as $image ) :
                                 $count++;
                         ?>  
