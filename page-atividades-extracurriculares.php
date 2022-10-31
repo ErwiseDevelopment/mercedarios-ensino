@@ -111,9 +111,10 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         $images = get_field( 'galeria_curso_extra' );
                         $count = 0;
 
-                        if( $images < 6) :
+                        if( $images ) :
                             foreach( $images as $image ) :
-                                $count++;
+                                if ($count < 7 );
+                                $count++
                         ?>  
                                         <div class="swiper-slide">
                                             <img
