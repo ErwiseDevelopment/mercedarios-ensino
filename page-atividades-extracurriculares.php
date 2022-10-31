@@ -104,7 +104,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <div class="col-12 mt-4">
                        
                             <!-- swiper -->
-                            <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo  2; ?>">
+                            <div class="swiper-container js-swiper-activities-all js-swiper-activities">
                            
                                 <div class="swiper-wrapper">
                                 <?php
@@ -113,7 +113,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                         if( $images ) :
                             foreach( $images as $image ) :
-                                if ($count < 7 );
+                                if ($count < 7 ):{
                                 $count++
                         ?>  
                                         <div class="swiper-slide">
@@ -123,16 +123,16 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             style="height:296px"
                                             alt="Atividade"> 
                                         </div> 
-                                        <?php
+                                        <?php }; endif;
                                 endforeach;
                             endif;
-                        ?>
+                                                                       ?>
                                 </div>
                             </div>
 
                             <!-- navigation -->
-                            <div class="swiper-button-prev swiper-button-prev-activities js-swiper-button-prev-activities-<?php echo  2; ?>"></div>
-                            <div class="swiper-button-next swiper-button-next-activities js-swiper-button-next-activities-<?php echo  2; ?>"></div>
+                            <div class="swiper-button-prev swiper-button-prev-activities js-swiper-button-prev-activities"></div>
+                            <div class="swiper-button-next swiper-button-next-activities js-swiper-button-next-activities"></div>
                             <!-- end swiper -->
                            
                         </div>
