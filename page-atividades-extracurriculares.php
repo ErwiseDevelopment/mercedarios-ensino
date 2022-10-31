@@ -103,8 +103,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                         <div class="col-12 mt-4">
                        
-                            <!-- swiper -->
-                            <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo $i; ?>">
+                          
                             <?php
                         $images = get_field( 'galeria_curso_extra' );
                         $count = -1;
@@ -113,6 +112,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             foreach( $images as $image ) :
                                 $count++;
                         ?>   
+                          <!-- swiper -->
+                          <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo $i; ?>">
                                 <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <img
@@ -121,11 +122,12 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             alt="Atividade"> 
                                         </div> 
                                 </div>
+                                </div>
                                 <?php
                                 endforeach;
                             endif;
                         ?>
-                            </div>
+                            
 
                             <!-- navigation -->
                             <div class="swiper-button-prev swiper-button-prev-activities js-swiper-button-prev-activities-<?php echo $i; ?>"></div>
