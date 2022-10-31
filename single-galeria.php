@@ -77,7 +77,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div class="col-md-4 my-2 js-photos" data-value="<?php echo $count; ?>">
                                     <img
                                     class="img-fluid w-100 h-100 u-object-fit-cover"
-                                   \
+                                    src="<?php echo $image[ 'url' ]; ?>"
                                     style="height:296px"
                                     alt="<?php the_title() ?>">
                                 </div>
