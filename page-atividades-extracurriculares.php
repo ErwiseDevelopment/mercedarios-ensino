@@ -108,7 +108,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                                 <div class="swiper-wrapper">
 
-                                    <?php echo get_field('galeria_curso')?>
+                                <img
+                                class="img-fluid w-100 h-100 u-object-fit-cover"
+                                style="border-top-left-radius:100px;border-bottom-right-radius:100px"
+                                src="<?php echo get_field('galeria_curso')?>"
+                                alt="Atividade">
                                 </div>    
                             </div>
 
