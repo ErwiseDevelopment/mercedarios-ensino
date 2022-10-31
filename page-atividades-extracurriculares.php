@@ -102,17 +102,17 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         </div>
 
                         <div class="col-12 mt-4">
-                        <?php
+                       
+                            <!-- swiper -->
+                            <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo $i; ?>">
+                            <?php
                         $images = get_field( 'galeria_curso_extra' );
                         $count = -1;
 
                         if( $images ) :
                             foreach( $images as $image ) :
                                 $count++;
-                    ?>
-                            <!-- swiper -->
-                            <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo $i; ?>">
-
+                        ?>   
                                 <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <img
@@ -121,16 +121,17 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             alt="Atividade"> 
                                         </div> 
                                 </div>
+                                <?php
+                                endforeach;
+                            endif;
+                        ?>
                             </div>
 
                             <!-- navigation -->
                             <div class="swiper-button-prev swiper-button-prev-activities js-swiper-button-prev-activities-<?php echo $i; ?>"></div>
                             <div class="swiper-button-next swiper-button-next-activities js-swiper-button-next-activities-<?php echo $i; ?>"></div>
                             <!-- end swiper -->
-                            <?php
-                                endforeach;
-                            endif;
-                        ?>
+                            
                         </div>
                     </div>
                 </div>
