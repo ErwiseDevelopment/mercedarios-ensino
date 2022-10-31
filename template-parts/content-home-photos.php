@@ -71,24 +71,22 @@
 
                         <!-- slide -->
                         <?php
-                            if( $galeries->have_posts() ) :
-                                while( $galeries->have_posts() ) : $galeries->the_post();
+                            if( $galleries ) :
+                                foreach( $galleries as $photo ) :
                         ?> 
                                     <div class="swiper-slide">
                                         <a 
                                         class="l-photos__overlay"
-                                        href="<?php the_permalink() ?>">
+                                        href="<?php echo get_home_url( null, '/' . $item->post_type . '/' . $item->post_name ); ?>">
                                             <img
                                             class="img-fluid w-100 h-100 u-object-fit-cover"
-                                            src="<?php echo get_field( 'capa_do_album' ) ?>"
-                                            alt="<?php the_title() ?>">
+                                            src="<?php echo get_field( 'capa_do_album', $item->ID ); ?>"
+                                            alt="<?php echo $item->post_title; ?>">
                                         </a>
                                     </div>
                         <?php
-                                endwhile;
+                                endforeach;
                             endif;
-                            
-                            wp_reset_query();
                         ?>
                         <!-- end slide -->
                     </div>
