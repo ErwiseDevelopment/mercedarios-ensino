@@ -107,26 +107,24 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo $count?>">
                            
                                 <div class="swiper-wrapper">
-                                <?php
-                        $images = get_field( 'galeria_curso_extra' );
-                        $count = -1;
+                                    <?php
+                                        $images = get_field( 'galeria_curso_extra' );
+                                        $count = -1;
 
-                        if( $images ) :
-                            foreach( $images as $image ) :
-                                
-                                $count++
-                        ?>  
+                                        if( $images ) :
+                                            foreach( $images as $image ) :
+                                                
+                                                $count++
+                                    ?>  
                                         <div class="swiper-slide" data-value=<?php echo $count; ?>>
                                             <img
                                             class="img-fluid w-100 u-object-fit-cover"
                                             src="<?php echo $image[ 'url' ]; ?>"
-                                            style="height:296px"
                                             alt="Atividade"> 
                                         </div> 
-                                        <?php 
+                                    <?php 
                                 endforeach;
-                            endif;
-                                                                       ?>
+                            endif; ?>
                                 </div>
                             </div>
 
