@@ -97,7 +97,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             </h4>
 
                             <p class="u-font-size-18 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold u-font-family-nunito u-color-folk-dark-gray">
-                               
+                               <?php echo get_field('descricao_extra') ?>
                             </p>
                         </div>
 
