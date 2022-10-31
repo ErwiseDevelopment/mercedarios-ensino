@@ -36,7 +36,7 @@ get_header(); ?>
 <!-- end news -->
 
 <!-- photos -->
-<?php echo get_template_part( 'template-parts/content', 'home-photos' ) ?>
+<?php get_template_part( 'template-parts/content', 'home-photos' ) ?>
 <!-- end photos -->
 
 <!-- newsletter -->
