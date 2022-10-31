@@ -12,8 +12,16 @@
 						$args = array(
 							'posts_per_page' => 3,
 							'post_type'      => 'curso',
-							'order'          => 'ASC'
-						);
+							'order'          => 'ASC',
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'tipo',
+                                    'field'    => 'ID',
+                                    'terms'    => 48,
+                                )
+                            )
+                        );
+						
 
 						$other_posts = new WP_Query( $args );
 
