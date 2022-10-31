@@ -55,25 +55,19 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
             <!-- loop -->
             <?php
-                // $args = array(
-                //     'posts_per_page' => -1,
-                //     'post_type'      => 'curso',
-                //     'order'          => 'DESC',
-                //     'tax_query'      => array(
-                //         array(
-                //             'taxonomy' => 'tipo',
-                //             'field'    => 'ID',
-                //             'terms'    => 49,
-                //         )
-                //     )
-                // );
-
                 $args = array(
                     'posts_per_page' => -1,
-                    'post_type'      => 'atividade',
-                    'order'          => 'DESC'
+                    'post_type'      => 'curso',
+                    'order'          => 'DESC',
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => 'tipo',
+                            'field'    => 'ID',
+                            'terms'    => 49,
+                        )
+                    )
                 );
-            
+
                 $posts_extra = new WP_Query( $args );
                 $count_slide = -1;
 
