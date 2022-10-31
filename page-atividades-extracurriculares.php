@@ -55,23 +55,17 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
             <!-- loop -->
             <?php
-                // $args = array(
-                //     'posts_per_page' => -1,
-                //     'post_type'      => 'curso',
-                //     'order'          => 'DESC',
-                //     'tax_query'      => array(
-                //         array(
-                //             'taxonomy' => 'tipo',
-                //             'field'    => 'ID',
-                //             'terms'    => 49,
-                //         )
-                //     )
-                // );
-
                 $args = array(
                     'posts_per_page' => -1,
-                    'post_type'      => 'atividade',
-                    'order'          => 'DESC'
+                    'post_type'      => 'curso',
+                    'order'          => 'DESC',
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => 'tipo',
+                            'field'    => 'ID',
+                            'terms'    => 49,
+                        )
+                    )
                 );
             
                 $posts_extra = new WP_Query( $args );
@@ -90,22 +84,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <div 
                                     class="h-100"
                                     style="background-color:#8A1719">
-                                        <!-- <img
+                                        <img
                                         class="img-fluid w-100 h-100 u-object-fit-cover"
                                         style="border-top-left-radius:100px;border-bottom-right-radius:100px"
-                                        src="<php echo get_field('imagem_destaque_extra')?>"
-                                        alt="Atividade"> -->
-
-                                        <?php
-                                            $alt_title = get_the_title();
-
-                                            the_post_thumbnail( 'post-thumbnail', 
-                                                array(
-                                                    'class' => 'img-fluid w-100 h-100 u-object-fit-cover',
-                                                    'style' => 'border-top-left-radius:100px;border-bottom-right-radius:100px',
-                                                    'alt'   => $alt_title
-                                                ));
-                                        ?>
+                                        src="<?php echo get_field('imagem_destaque_extra')?>"
+                                        alt="Atividade">
                                     </div>
                                 </div>
 
@@ -116,7 +99,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     </h4>
 
                                     <span class="d-block u-font-size-18 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold u-font-family-nunito u-color-folk-dark-gray">
-                                        <?php the_content() ?>
+                                        <?php echo get_field( 'descricao_extra' ) ?>
                                     </span>
                                 </div>
 
