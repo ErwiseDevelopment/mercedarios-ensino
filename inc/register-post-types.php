@@ -10,13 +10,13 @@ function single_create_post_type() {
 		'supports' 	  => array( 'title' ) 
 	));
 
-	register_post_type( 'atividade', array(
-		'labels'      => array( 'name' => 'Atividades Extracurriculares', 'singular_name' => 'Atividade Extracurriculares', 'all_items' => 'Todos as atividades' ),
-		'public' 	  => true,
-		'has_archive' => true,
-		'menu_icon'	  => 'dashicons-welcome-learn-more',
-		'supports' 	  => array( 'title', 'editor', 'thumbnail' ) 
-	));
+	// register_post_type( 'atividade', array(
+	// 	'labels'      => array( 'name' => 'Atividades Extracurriculares', 'singular_name' => 'Atividade Extracurriculares', 'all_items' => 'Todos as atividades' ),
+	// 	'public' 	  => true,
+	// 	'has_archive' => true,
+	// 	'menu_icon'	  => 'dashicons-welcome-learn-more',
+	// 	'supports' 	  => array( 'title', 'editor', 'thumbnail' ) 
+	// ));
 
 	register_post_type( 'galeria', array(
 		 	'labels' 		=> array( 'name' => 'Galerias', 'singular_name' => 'Galeria', 'all_items' => 'Todas Galerias' ),
