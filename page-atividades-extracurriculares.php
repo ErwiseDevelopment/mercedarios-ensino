@@ -55,89 +55,110 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
             <!-- loop -->
             <?php
-						$args = array(
-							'posts_per_page' => -1,
-							'post_type'      => 'curso',
-							'order'          => 'ASC',
-						    'tax_query'      => array(
-                                array(
-                                    'taxonomy' => 'tipo',
-                                    'field'    => 'ID',
-                                    'terms'    => 49,
-                                )
-                            )
-                        );
-					
-                        $other_posts = new WP_Query( $args );
+                // $args = array(
+                //     'posts_per_page' => -1,
+                //     'post_type'      => 'curso',
+                //     'order'          => 'DESC',
+                //     'tax_query'      => array(
+                //         array(
+                //             'taxonomy' => 'tipo',
+                //             'field'    => 'ID',
+                //             'terms'    => 49,
+                //         )
+                //     )
+                // );
 
-						if( $other_posts->have_posts()) :
-							while( $other_posts->have_posts()) : $other_posts->the_post();
-					?>
-                <div class="col-12 my-5 my-lg-4">
+                $args = array(
+                    'posts_per_page' => -1,
+                    'post_type'      => 'atividade',
+                    'order'          => 'DESC'
+                );
+            
+                $posts_extra = new WP_Query( $args );
+                $count_slide = -1;
 
-                    <div class="row">
+                if( $posts_extra->have_posts()) :
+                    while( $posts_extra->have_posts()) : $posts_extra->the_post();
+                        $count_slide++;        
+            ?>
+                        <div class="col-12 my-5 my-lg-4">
 
-                        <div class="col-lg-6">
+                            <div class="row">
 
-                            <div 
-                            class="h-100"
-                            style="background-color:#8A1719">
-                                <img
-                                class="img-fluid w-100 h-100 u-object-fit-cover"
-                                style="border-top-left-radius:100px;border-bottom-right-radius:100px"
-                                src="<?php echo get_field('imagem_destaque_extra')?>"
-                                alt="Atividade">
-                            </div>
-                        </div>
+                                <div class="col-lg-6">
 
-                        <div class="col-lg-6">
+                                    <div 
+                                    class="h-100"
+                                    style="background-color:#8A1719">
+                                        <!-- <img
+                                        class="img-fluid w-100 h-100 u-object-fit-cover"
+                                        style="border-top-left-radius:100px;border-bottom-right-radius:100px"
+                                        src="<php echo get_field('imagem_destaque_extra')?>"
+                                        alt="Atividade"> -->
 
-                            <h4 class="u-font-size-32 xl:u-font-size-42 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito u-color-folk-bold-marron mb-4">
-                                <?php the_title()?>
-                            </h4>
+                                        <?php
+                                            $alt_title = get_the_title();
 
-                            <p class="u-font-size-18 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold u-font-family-nunito u-color-folk-dark-gray">
-                               <?php echo get_field('descricao_extra') ?>
-                            </p>
-                        </div>
+                                            the_post_thumbnail( 'post-thumbnail', 
+                                                array(
+                                                    'class' => 'img-fluid w-100 h-100 u-object-fit-cover',
+                                                    'style' => 'border-top-left-radius:100px;border-bottom-right-radius:100px',
+                                                    'alt'   => $alt_title
+                                                ));
+                                        ?>
+                                    </div>
+                                </div>
 
-                        <div class="col-12 mt-4">
-                       
-                            <!-- swiper -->
-                            <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo $count?>">
-                           
-                                <div class="swiper-wrapper">
-                                    <?php
-                                        $images = get_field( 'galeria_curso_extra' );
-                                        $count = -1;
+                                <div class="col-lg-6">
 
-                                        if( $images ) :
-                                            foreach( $images as $image ) :
-                                                
-                                                $count++
-                                    ?>  
-                                        <div class="swiper-slide" data-value=<?php echo $count; ?>>
-                                            <img
-                                            class="img-fluid w-100 u-object-fit-cover"
-                                            src="<?php echo $image[ 'url' ]; ?>"
-                                            alt="Atividade"> 
-                                        </div> 
-                                    <?php 
-                                endforeach;
-                            endif; ?>
+                                    <h4 class="u-font-size-32 xl:u-font-size-42 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito u-color-folk-bold-marron mb-4">
+                                        <?php the_title()?>
+                                    </h4>
+
+                                    <span class="d-block u-font-size-18 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold u-font-family-nunito u-color-folk-dark-gray">
+                                        <?php the_content() ?>
+                                    </span>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                            
+                                    <!-- swiper -->
+                                    <div class="swiper-container js-swiper-activities-all js-swiper-activities-<?php echo $count_slide; ?>">
+                                
+                                        <div class="swiper-wrapper">
+                                            <?php
+                                                $images = get_field( 'galeria' );
+                                                $count = -1;
+
+                                                if( $images ) :
+                                                    foreach( $images as $image ) :
+                                                        $count++
+                                            ?>  
+                                                        <div class="swiper-slide l-photos__overlay js-photos" data-value=<?php echo $count; ?>>
+                                                            <img
+                                                            class="img-fluid w-100 h-100 u-object-fit-cover"
+                                                            src="<?php echo $image[ 'url' ]; ?>"
+                                                            alt="Atividade"> 
+                                                        </div> 
+                                            <?php 
+                                                    endforeach;
+                                                endif; ?>
+                                        </div>
+                                    </div>
+
+                                    <!-- navigation -->
+                                    <div class="swiper-button-prev swiper-button-prev-activities js-swiper-button-prev-activities-<?php echo $count_slide; ?>"></div>
+                                    <div class="swiper-button-next swiper-button-next-activities js-swiper-button-next-activities-<?php echo $count_slide; ?>"></div>
+                                    <!-- end swiper -->
                                 </div>
                             </div>
-
-                            <!-- navigation -->
-                            <div class="swiper-button-prev swiper-button-prev-activities js-swiper-button-prev-activities-<?php echo $count?>"></div>
-                            <div class="swiper-button-next swiper-button-next-activities js-swiper-button-next-activities-<?php echo $count?>"></div>
-                            <!-- end swiper -->
-                           
                         </div>
-                    </div>
-                </div>
-            <?php endwhile;
-            endif; ?>
+            <?php 
+                    endwhile;
+                endif; 
+
+                wp_reset_query();
+            ?>
             <!-- end loop -->
         </div>
     </div>
@@ -214,6 +235,53 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 <!-- banner material -->
 <?php echo get_template_part( 'template-parts/content', 'banner-material' ) ?>
 <!-- end banner material -->
+
+<!-- modal photos -->
+<div class="l-modal-photos d-flex justify-content-center align-items-center js-modal-photos">
+    
+    <div class="l-modal-photos__overlay js-modal-photos-overlay"></div>
+    <span class="l-modal-photos__close js-modal-photos-close">x</span>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-10 col-lg-8">
+
+                <!-- swiper -->
+                <div class="swiper-container js-swiper-modal-photos">
+
+                    <div class="swiper-wrapper">
+                        
+                        <!-- slide -->
+                        <?php
+                            if( $images ) :
+                                foreach( $images as $image ) :
+                        ?>
+                                    <div class="swiper-slide">
+                                        <img
+                                        class="l-modal-photos__image img-fluid w-100"
+                                        src="<?php echo $image[ 'url' ]; ?>"
+                                        alt="<?php the_title() ?>">
+                                    </div>
+                        <?php
+                                endforeach;
+                            endif;
+                        ?>
+                        <!-- end slide -->
+                    </div>
+                </div>
+
+                <!-- arrows -->
+                <div class="swiper-button-prev swiper-button-prev-modal-photos u-color-folk-white js-swiper-button-prev-modal-photos"></div>
+                <div class="swiper-button-next swiper-button-next-modal-photos js-swiper-button-next-modal-photos"></div>
+                <!-- end swiper -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal photos -->
+
 
 <?php endwhile; ?>
 
