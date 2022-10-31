@@ -54,7 +54,25 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
         <div class="row">
 
             <!-- loop -->
-            <?php for( $i = 0; $i < 2; $i++ ) { ?>
+            <?php
+						$args = array(
+							'posts_per_page' => -1,
+							'post_type'      => 'curso',
+							'order'          => 'ASC',
+						    'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'tipo',
+                                    'field'    => 'ID',
+                                    'terms'    => 49,
+                                )
+                            )
+                        );
+					
+                        $other_posts = new WP_Query( $args );
+
+						if( $other_posts->have_posts()) :
+							while( $other_posts->have_posts()) : $other_posts->the_post();
+					?>
                 <div class="col-12 my-5 my-lg-4">
 
                     <div class="row">
@@ -67,7 +85,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <img
                                 class="img-fluid w-100 h-100 u-object-fit-cover"
                                 style="border-top-left-radius:100px;border-bottom-right-radius:100px"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/atividade-01.png"
+                                src="<?php echo get_field('imagem_destaque_extra')?>"
                                 alt="Atividade">
                             </div>
                         </div>
@@ -75,20 +93,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <div class="col-lg-6">
 
                             <h4 class="u-font-size-32 xl:u-font-size-42 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito u-color-folk-bold-marron mb-4">
-                                Balé
+                                <?php the_title()?>
                             </h4>
 
                             <p class="u-font-size-18 xl:u-font-size-20 xxl:u-font-size-24 u-font-weight-semibold u-font-family-nunito u-color-folk-dark-gray">
-                                O balé é uma atividade muito recomendada para crianças, pois combina atividades físicas com musicalidade, ritmo, coordenação motora e concentração que são elementos importantes no decorrer do desenvolvimento geral do aluno.
-                                
-                                <br> <br>
-
-                                Essa atividade traz diversos benefícios, tais como: <br>
-                                • Socialização; <br>
-                                • Autoconfiança; <br>
-                                • Habilidade corporal e boa postura; <br>
-                                • Compreensão da relação entre música, ritmo e movimento, contribuindo com o desenvolvimento da memória e consciência corporal; <br>
-                                • Aprimora o foco e a concentração.
+                               
                             </p>
                         </div>
 
@@ -99,14 +108,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                                 <div class="swiper-wrapper">
 
-                                    <?php for( $j = 0; $j < 6; $j++ ) { ?>
-                                        <div class="swiper-slide">
-                                            <img
-                                            class="img-fluid w-100 u-object-fit-cover"
-                                            src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/atividade-01.png"
-                                            alt="Atividade"> 
-                                        </div>
-                                    <?php } ?>
+                                    <?php echo get_field('galeria_curso')?>
                                 </div>    
                             </div>
 
@@ -117,7 +119,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         </div>
                     </div>
                 </div>
-            <?php } ?>
+            <?php endwhile;
+            endif; ?>
             <!-- end loop -->
         </div>
     </div>
