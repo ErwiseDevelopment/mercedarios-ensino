@@ -109,21 +109,21 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div class="swiper-wrapper">
                                 <?php
                         $images = get_field( 'galeria_curso_extra' );
-                        $count = 0;
+                        $count = -1;
 
                         if( $images ) :
                             foreach( $images as $image ) :
-                                if ($count < 7 ):{
+                                
                                 $count++
                         ?>  
-                                        <div class="swiper-slide">
+                                        <div class="swiper-slide data-value="<?php echo $count; ?>">
                                             <img
                                             class="img-fluid w-100 u-object-fit-cover"
                                             src="<?php echo $image[ 'url' ]; ?>"
                                             style="height:296px"
                                             alt="Atividade"> 
                                         </div> 
-                                        <?php }; endif;
+                                        <?php 
                                 endforeach;
                             endif;
                                                                        ?>
