@@ -116,7 +116,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 
                                 $count++
                         ?>  
-                                        <div class="swiper-slide data-value="<?php echo $count; ?>">
+                                        <div class="swiper-slide" data-value=<?php echo $count; ?>>
                                             <img
                                             class="img-fluid w-100 u-object-fit-cover"
                                             src="<?php echo $image[ 'url' ]; ?>"
