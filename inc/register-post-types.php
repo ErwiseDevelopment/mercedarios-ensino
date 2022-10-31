@@ -26,7 +26,7 @@ if(get_field('estrutura', 'option') == '1'):{
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
 	}; endif;
-	
+
 	register_post_type( 'equipe', array(
 		'labels' 		=> array( 'name' => 'Equipe', 'singular_name' => 'Equipe', 'all_items' => 'Equipe' ),
 		'public' 		=> true,
@@ -44,6 +44,7 @@ function erwise_create_taxonomy() {
 	register_taxonomy( 'ambiente', 'estrutura', array( 'labels' => array( 'name' => 'Ambientes', 'singular_name' => 'Cidade' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'unidade', 'estrutura', array( 'labels' => array( 'name' => 'Unidades', 'singular_name' => 'Categoria' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 	register_taxonomy( 'areas', 'equipe', array( 'labels' => array( 'name' => 'Cargo', 'singular_name' => 'Cargo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
+	register_taxonomy( 'tipo', 'curso', array( 'labels' => array( 'name' => 'Tipo', 'singular_name' => 'Tipo' ), 'hierarchical' => true, 'show_admin_column' => true ) );
 
 }
 add_action( 'init', 'erwise_create_taxonomy' );
