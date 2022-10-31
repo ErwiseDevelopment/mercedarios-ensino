@@ -173,6 +173,13 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 							'post_type'      => 'curso',
 							'order'          => 'ASC',
 						    'post__not_in'   => array (get_the_ID()),
+                            'tax_query'      => array(
+                                array(
+                                    'taxonomy' => 'tipo',
+                                    'field'    => 'ID',
+                                    'terms'    => 48,
+                                )
+                            )
 						);
 
 						$other_posts = new WP_Query( $args );
