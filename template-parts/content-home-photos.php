@@ -8,44 +8,55 @@
             <div class="col-12 d-none d-lg-block">
 
                 <div class="row">
-                        <?php
-                                    $args = array(
-                                        'posts_per_page' => 8,
-                                        'post_type'      => 'galeria',
-                                        'order'          => 'DESC'
-                                    );
+                     
+                    <!-- loop -->
+                    <?php 
+                        $posts_count = 1;
+                        
+                        for( $i = 0; $i < 4; $i++ ) { 
+                    ?>
+                            <div class="col-lg-3 l-photos__col-child">
 
-                                    $galeries = new WP_Query( $args );
+                                <div class="row">
 
-                                    if( $galeries->have_posts() ) :
-                                        while( $galeries->have_posts() ) : $galeries->the_post();
-                        ?>   
-                    <!-- <php for( $i = 0; $i < 4; $i++ ) { ?> -->
-                        <div class="col-lg-3 l-photos__col-child">
+                                    <!-- item -->
+                                    <?php
+                                        $args = array(
+                                            'posts_per_page' => 8,
+                                            'post_type'      => 'galeria',
+                                            'order'          => 'DESC'
+                                        );
 
-                            <div class="row">
+                                        $galleries = get_posts( $args );
+                                        
+                                        $count = count($galleries);
+                                        $chunk = array_chunk($galleries, ceil($count / 4));
 
-                                <!-- <php for( $j = 0; $j < 2; $j++ ) { ?> -->
-                                    <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
-                                        <a 
-                                        class="l-photos__overlay"
-                                        href="<?php the_permalink() ?>">
-                                            <img
-                                            class="img-fluid w-100 h-100 u-object-fit-cover"
-                                            src="<?php echo get_field( 'capa_do_album' ) ?>"
-                                            alt="<?php the_title() ?>">
-                                        </a>
-                                    </div>
-                                <!--?php } ?> -->
+                                        foreach( $chunk[$i] as $item ) :
+                                            setup_postdata($item);
+                                    ?>  
+                                            <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
+                                                <a 
+                                                class="l-photos__overlay"
+                                                href="<?php echo get_home_url( null, '/' . $item->post_type . '/' . $item->post_name ); ?>">
+                                                    <img
+                                                    class="img-fluid w-100 h-100 u-object-fit-cover"
+                                                    src="<?php echo get_field( 'capa_do_album', $item->ID ); ?>"
+                                                    alt="<?php echo $item->post_title; ?>">
+                                                </a>
+                                            </div>
+                                    <?php
+                                        endforeach;
+                                    ?>
+                                <!-- end item -->
+                                </div>
                             </div>
-                        </div>
-                    <!--?php } ?> -->
-                    <?php
-                                endwhile;
-                            endif;
-                            
-                            wp_reset_query();
-                        ?>
+                    <?php  
+                            if( $posts_count == 8 )
+                                break;
+                        } 
+                    ?>
+                    <!-- end loop -->
                 </div>
             </div>
             <!-- end desktop -->
@@ -59,16 +70,26 @@
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                        <div class="swiper-slide">
-                            <a 
-                            class="l-photos__overlay"
-                            href="#">
-                                <img
-                                class="img-fluid w-100 h-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
-                                alt="">
-                            </a>
-                        </div>
+                        <?php
+                            if( $galeries->have_posts() ) :
+                                while( $galeries->have_posts() ) : $galeries->the_post();
+                        ?> 
+                                    <div class="swiper-slide">
+                                        <a 
+                                        class="l-photos__overlay"
+                                        href="<?php the_permalink() ?>">
+                                            <img
+                                            class="img-fluid w-100 h-100 u-object-fit-cover"
+                                            src="<?php echo get_field( 'capa_do_album' ) ?>"
+                                            alt="<?php the_title() ?>">
+                                        </a>
+                                    </div>
+                        <?php
+                                endwhile;
+                            endif;
+                            
+                            wp_reset_query();
+                        ?>
                         <!-- end slide -->
                     </div>
                 </div>

@@ -65,7 +65,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
             <div class="col-12">
 
                 <div class="row">
-<!-- //test -->
+
                     <?php
                         $images = get_field( 'galeria' );
                         $count = -1;
@@ -74,9 +74,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             foreach( $images as $image ) :
                                 $count++;
                     ?>
-                                <div class="col-md-4 my-2 js-photos" data-value="<?php echo $count; ?>">
+                                <div class="col-md-4 l-photos__overlay my-2 js-photos" data-value="<?php echo $count; ?>">
                                     <img
-                                    class="img-fluid w-100 h-100 u-object-fit-cover"
+                                    class="img-fluid w-100 u-object-fit-cover"
                                     src="<?php echo $image[ 'url' ]; ?>"
                                     style="height:296px"
                                     alt="<?php the_title() ?>">
