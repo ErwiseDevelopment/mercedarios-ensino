@@ -117,7 +117,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <img
-                                            class="img-fluid w-100 u-object-fit-cover"
+                                            class="img-fluid w-100 h-100 u-object-fit-cover"
                                             src="<?php echo $image[ 'url' ]; ?>"
                                             alt="Atividade"> 
                                         </div> 
