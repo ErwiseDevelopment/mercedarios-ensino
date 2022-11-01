@@ -120,6 +120,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         <div class="swiper-slide l-photos__overlay js-photos" data-value=<?php echo $count; ?>>
                                                             <img
                                                             class="img-fluid w-100 h-100 u-object-fit-cover"
+                                                            style="height:275px"
                                                             src="<?php echo $image[ 'url' ]; ?>"
                                                             alt="Atividade"> 
                                                         </div> 
