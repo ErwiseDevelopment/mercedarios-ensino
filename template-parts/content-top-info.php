@@ -12,16 +12,14 @@
 
                         <div class="row justify-content-center">
 
-                            <div class="col-8">
-
+                            <div class="col-6">
                                 
-                                    <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                                        <img 
-                                        class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php echo get_field('logo', 'option'); ?>" 
-                                        alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                                    </a>
-                              
+                                <a href="<?php echo esc_url( home_url( '/' )); ?>">
+                                    <img 
+                                    class="img-fluid w-100 u-object-fit-cover"
+                                    src="<?php echo get_field('logo', 'option'); ?>" 
+                                    alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                                </a>
                             </div>
                         </div>
                     </div>
