@@ -128,7 +128,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             href="#">
                                 <img
                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
+                                src="<?php  ?>"
                                 alt="">
                             </a>
                         </div>
