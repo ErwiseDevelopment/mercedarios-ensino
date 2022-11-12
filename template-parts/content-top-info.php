@@ -81,8 +81,8 @@
                                     rel="noreferrer noopener">
                                         Link do Whatsapp
                                     </a>
-                                </li>
-                            <?php } endif;?> 
+                                </li> 
+                            <?php } endif; //yrstr?> 
                             </ul>
                         </div>
                     </div>
