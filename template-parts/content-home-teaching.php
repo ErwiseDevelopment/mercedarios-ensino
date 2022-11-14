@@ -49,6 +49,7 @@
                                             </div>
                                         </div>
                                     </a>
+                                    <!-- teste git -->
                                 </div>
                     <?php
 							endwhile;
