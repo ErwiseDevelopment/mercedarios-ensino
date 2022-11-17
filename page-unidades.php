@@ -91,9 +91,16 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div class="card">
 
                                     <div class="card-img">
-                                        <img
-                                        class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php the_post_thumbnail();?>">
+                                    <?php
+                                                $alt_title = get_the_title();
+
+                                                    the_post_thumbnail( 'post-thumbnail',
+                                                        array(
+                                                            'class' => 'img-fluid w-100 u-object-fit-cover',
+                                                            'alt'   => $alt_title
+                                                        ));
+                                            ?>
+                                        
                                     </div>
 
                                     <div 
