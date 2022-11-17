@@ -70,7 +70,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                         'taxonomy' => 'ambiente',
                                         'field'    => 'slug',
                                         // 'terms'    => array( $editorial_slug_current )
-                                    );
+                                    )
                                     array(
                                         'taxonomy' => 'unidade',
                                         'field'    => 'slug',
