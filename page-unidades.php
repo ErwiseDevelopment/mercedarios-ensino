@@ -93,8 +93,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <div class="card-img">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php the_post_thumbnail('post-thumbnail')?>"
-                                       >
+                                        src="<?php the_post_thumbnail('post-thumbnail')?>">
                                     </div>
 
                                     <div 
