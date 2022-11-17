@@ -62,7 +62,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <!-- slide -->
                         <?php  
                               $args = array(
-                                'posts_per_page' => -1,
+                                //'posts_per_page' => -1,
                                 'post_type'      => 'estrutura',
                                 'order'          => 'DESC',
                                 'tax_query'      => array(
@@ -105,7 +105,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         $post_categories = get_the_terms( get_the_ID(), 'ambiente' );
 
                                                         foreach( $post_categories as $category ) :
-                                                            if( $category->parent > 0 )
+                                                            
                                                                 echo $category->name;
                                                         endforeach;
 
@@ -116,7 +116,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                     $post_categories = get_the_terms( get_the_ID(), 'unidade' );
 
                                                     foreach( $post_categories as $category ) :
-                                                        if( $category->parent > 0 )
+                                                      
                                                             echo $category->name;
                                                     endforeach;
 
