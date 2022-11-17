@@ -112,7 +112,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                     // "/n";
                                                     
                                                     // echo var_dump($post_categories)
-                                                    ?> | <?php echo var_dump($unidades)
+                                                    ?> | <?php echo var_dump($unidades);
                                                     $post_categories = get_the_terms( get_the_ID(), 'unidade' );
 
                                                     foreach( $post_categories as $category ) :
