@@ -75,7 +75,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                         'taxonomy' => 'unidade',
                                         'field'    => 'slug',
                                         //'terms'    => array( $editorial_slug_current )
-                                    );
+                                    )
                                 )
                             );
 
