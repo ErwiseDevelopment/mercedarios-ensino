@@ -62,7 +62,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <!-- slide -->
                         <?php  
                               $args = array(
-                                //'posts_per_page' => -1,
+                               'posts_per_page' => -1,
                                 'post_type'      => 'estrutura',
                                 'order'          => 'DESC',
                                 'tax_query'      => array(
