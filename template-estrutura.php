@@ -83,8 +83,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     $count = -1;
                                     
                                     for( $j = 0; $j < 2; $j++ ) { 
-                                        $count++
+                                        $count++;
+                                        $images = get_field('galeria_estrutura');
+                                        if( $images ): 
                                 ?>
+                                <?php foreach( $images as $image ): ?>
                                         <div 
                                         class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0" 
                                         data-value="<?php echo $count; ?>">
@@ -93,14 +96,14 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             href="#">
                                                 <img
                                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                src="<?php echo get_field('galeria_estrutura')?>"
+                                                src="<?php echo esc_url($image['thumbnail']); ?>"
                                                 alt="">
                                             </a>
                                         </div>
-                                <?php } ?>
+                                        <?php endforeach; endif;?>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php };} ?>
                 </div>
             </div>
             <!-- end desktop -->
