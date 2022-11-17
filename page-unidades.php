@@ -86,7 +86,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         ?>
                             <a 
                             class="swiper-slide text-decoration-none"
-                            href="#">
+                            href="">
 
                                 <div class="card">
 
