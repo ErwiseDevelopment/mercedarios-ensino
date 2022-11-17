@@ -124,7 +124,7 @@
                 </div>
             </div>
 
-            <div class="row justify-content-end"> 
+            <div class="row"> 
                 <div class="col-lg-4 my-4 my-lg-0">
 
                         <div class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
