@@ -113,11 +113,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                     
                                                     // echo var_dump($post_categories)
                                                     ?> | <?php echo var_dump($unidades);
-                                                    $post_categories = get_the_terms( get_the_ID(), 'unidade' );
+                                                    $post_cat = get_the_terms( get_the_ID(), 'unidade' );
 
-                                                    foreach( $post_categories as $category ) :
+                                                    foreach( $post_cat as $cat ) :
                                                       
-                                                            echo $category->name;
+                                                            echo $cat->name;
                                                     endforeach;
 
                                                 // "/n";
