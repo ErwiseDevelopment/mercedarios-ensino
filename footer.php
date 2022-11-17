@@ -178,7 +178,7 @@
                             <?php } endif;?>   
                         </ul>
                 
-                <div class="col-lg-4 my-4 my-lg-0">
+               
                          <div class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
                             <p class="u-font-size-22 xxl:u-font-size-24 u-font-weight-extrabold u-font-family-nunito text-center u-color-white"><?php echo get_field('escola2', 'option')?></p>
                         </div>                    
@@ -229,7 +229,8 @@
                             </li>
                             <?php } endif;?>   
                         </ul>
-                </div></div>
+                   
+                </div>
             </div>
 
             <div class="row justify-content-center">
