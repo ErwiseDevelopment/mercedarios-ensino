@@ -65,18 +65,18 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                'posts_per_page' => -1,
                                 'post_type'      => 'estrutura',
                                 'order'          => 'DESC',
-                                'tax_query'      => array(
-                                    array(
-                                        'taxonomy' => 'ambiente',
-                                        'field'    => 'slug',
-                                        // 'terms'    => array( $editorial_slug_current )
-                                    ),
-                                    array(
-                                        'taxonomy' => 'unidade',
-                                        'field'    => 'slug',
-                                        //'terms'    => array( $editorial_slug_current )
-                                    )
-                                )
+                                // 'tax_query'      => array(
+                                //     array(
+                                //         'taxonomy' => 'ambiente',
+                                //         'field'    => 'slug',
+                                //         // 'terms'    => array( $editorial_slug_current )
+                                //     ),
+                                //     array(
+                                //         'taxonomy' => 'unidade',
+                                //         'field'    => 'slug',
+                                //         //'terms'    => array( $editorial_slug_current )
+                                //     )
+                                // )
                             );
 
                             $unidades = new WP_Query( $args );
