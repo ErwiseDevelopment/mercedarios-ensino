@@ -93,7 +93,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <div class="card-img">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php the_post_thumbnail()?>"
+                                        src="<?php the_post_thumbnail('post-thumbnail')?>"
                                         alt="Estrutura 1">
                                     </div>
 
@@ -112,7 +112,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                     // "/n";
                                                     
                                                     // echo var_dump($post_categories)
-                                                    ?> | <?php echo var_dump($unidades);
+                                                    ?> | <?php //echo var_dump($unidades);
                                                     $post_cat = get_the_terms( get_the_ID(), 'unidade' );
 
                                                     foreach( $post_cat as $cat ) :
