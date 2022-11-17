@@ -128,7 +128,12 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     </div>
                                 </div>
                             </a>
-                        <?php } ?>
+                            <?php 
+                                    endwhile;
+                                endif;
+
+                                wp_reset_query();
+                            ?>
                         <!-- end slide -->
                     </div>
 
