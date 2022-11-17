@@ -138,7 +138,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
 
             <div class="col-12 mt-4">
 
-                <div class="row">
+                <div class="row justify-content-center ">
                   <?php echo get_field('mapa', 'option')?>
                 </div>
             </div>
