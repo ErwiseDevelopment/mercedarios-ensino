@@ -49,7 +49,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
                 <div class="row">
 
                     <div class="col-md-6">
-                        <?php echo do_shortcode( '[contact-form-7 id="11" title="Contato"]' ) ?>
+                        <?php echo do_shortcode( get_field('shortcode', 'option') ) ?>
                     </div>
 
                     <div class="col-md-5 offset-md-1 mt-5 mt-md-0">
@@ -139,7 +139,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             <div class="col-12 mt-4">
 
                 <div class="row">
-                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3603352791056!2d-47.91948388514452!3d-15.837647739024316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a255bd8aca437%3A0x4bd5cb59a0537dab!2sProv%C3%ADncia%20Merced%C3%A1ria%20do%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1666714575449!5m2!1spt-BR!2sbr" width="1920" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                   <iframe src="https://www.google.com/maps/place/Prov%C3%ADncia+Merced%C3%A1ria+do+Brasil/@-15.837654,-47.917353,16z/data=!4m6!3m5!1s0x935a255bd8aca437:0x4bd5cb59a0537dab!8m2!3d-15.8376544!4d-47.9173532!16s%2Fg%2F11c1ww66db?hl=pt-BR" width="1920" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
