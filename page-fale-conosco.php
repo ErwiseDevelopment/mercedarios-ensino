@@ -139,7 +139,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             <div class="col-12 mt-4">
 
                 <div class="row">
-                   <iframe src="https://www.google.com/maps/place/Prov%C3%ADncia+Merced%C3%A1ria+do+Brasil/@-15.837654,-47.917353,16z/data=!4m6!3m5!1s0x935a255bd8aca437:0x4bd5cb59a0537dab!8m2!3d-15.8376544!4d-47.9173532!16s%2Fg%2F11c1ww66db?hl=pt-BR" width="1920" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <?php echo get_field('mapa', 'option')?>
                 </div>
             </div>
         </div>

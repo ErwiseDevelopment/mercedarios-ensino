@@ -60,7 +60,30 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                        <?php for( $i = 0; $i < 8; $i++ ) { ?>
+                        <?php  
+                              $args = array(
+                                'posts_per_page' => -1,
+                                'post_type'      => 'estrutura',
+                                'order'          => 'DESC',
+                                'tax_query'      => array(
+                                    array(
+                                        'taxonomy' => 'ambiente',
+                                        'field'    => 'slug',
+                                        // 'terms'    => array( $editorial_slug_current )
+                                    );
+                                    array(
+                                        'taxonomy' => 'unidade',
+                                        'field'    => 'slug',
+                                        //'terms'    => array( $editorial_slug_current )
+                                    );
+                                )
+                            );
+
+                            $unidades = new WP_Query( $args );
+
+                            if( $unidades->have_posts() ) :
+                                while( $unidades->have_posts() ) : $unidades->the_post();
+                        ?>
                             <a 
                             class="swiper-slide text-decoration-none"
                             href="#">
@@ -70,7 +93,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <div class="card-img">
                                         <img
                                         class="img-fluid w-100 u-object-fit-cover"
-                                        src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/estrutura-1.png"
+                                        src="<?php the_thumbnail()?>"
                                         alt="Estrutura 1">
                                     </div>
 
@@ -78,7 +101,29 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     class="card-body"
                                     style="background-color:#871619">
                                         <h4 class="u-font-size-32 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white mb-0">
-                                            Biblioteca | Unidade I
+                                        <?php
+                                                        $post_categories = get_the_terms( get_the_ID(), 'ambiente' );
+
+                                                        foreach( $post_categories as $category ) :
+                                                            if( $category->parent > 0 )
+                                                                echo $category->name;
+                                                        endforeach;
+
+                                                    // "/n";
+                                                    
+                                                    // echo var_dump($post_categories)
+                                                    ?> | <?php
+                                                    $post_categories = get_the_terms( get_the_ID(), 'unidade' );
+
+                                                    foreach( $post_categories as $category ) :
+                                                        if( $category->parent > 0 )
+                                                            echo $category->name;
+                                                    endforeach;
+
+                                                // "/n";
+                                                
+                                                // echo var_dump($post_categories)
+                                                ?>
                                         </h4>
                                     </div>
                                 </div>
