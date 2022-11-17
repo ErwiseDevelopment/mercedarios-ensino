@@ -74,7 +74,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                 <div class="row">
                         <?php 
-                        $images = get_field('galeria_estrutura');
+                        $images = get_field('galeria');
                                         if( $images ): ?>
                           <?php foreach( $images as $image ): ?> 
                             
