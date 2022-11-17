@@ -68,15 +68,15 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
     <div class="container-fluid">
 
         <div class="row">
-        <?php 
-                        $images = get_field('galeria_estrutura');
-                                        if( $images ): ?>
-                          <?php foreach( $images as $image ): ?>     
+                            
             <!-- desktop -->
             <div class="col-12 d-none d-lg-block">
 
                 <div class="row">
-
+                        <?php 
+                        $images = get_field('galeria_estrutura');
+                                        if( $images ): ?>
+                          <?php foreach( $images as $image ): ?> 
                             
                         <div class="col-lg-3 l-photos__col-child">
 
@@ -97,10 +97,10 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                
                             </div>
                         </div>
-                    <?php  ?>
+                        <?php endforeach;  ;endif; ?>
                 </div>
             </div>
-            <?php endforeach;  ;endif; ?>
+           
             <!-- end desktop -->
 
             <!-- mobile -->
