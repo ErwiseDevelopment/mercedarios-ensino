@@ -37,10 +37,10 @@
                             </div>
                         </div>
                         <?php } endif;?>
-
+                        <div class="pb-5"><p>piro231</p></div>          
                         <div>
                             <ul class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
-                            <li>PIOX1</li>
+                          
                                 <?php if (!empty(get_field('facebook_redes', 'option'))):{?>
                                     <li class="u-list-style-none mr-2">
                                         <a
@@ -84,10 +84,11 @@
                                 <?php } endif; ?> 
                             </ul>
                         </div>
+                        <div class="pb-5"><p>piro231</p></div>    
                         <div>
 
                             <ul class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
-                                <li>PIOX1</li>
+                               
                                 <?php if (!empty(get_field('facebook_redes', 'option'))):{?>
                                     <li class="u-list-style-none mr-2">
                                         <a
