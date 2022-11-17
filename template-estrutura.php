@@ -68,28 +68,23 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
     <div class="container-fluid">
 
         <div class="row">
-
+        <?php 
+                        $images = get_field('galeria_estrutura');
+                                        if( $images ): ?>
+                          <?php foreach( $images as $image ): ?>     
             <!-- desktop -->
             <div class="col-12 d-none d-lg-block">
 
                 <div class="row">
 
-                    <?php 
-                        $images = get_field('galeria_estrutura');
-                                        if( $images ): ?>
-                                        
+                            
                         <div class="col-lg-3 l-photos__col-child">
 
                             <div class="row">
 
-                                <?php 
-                                    $count = -1;
-                                    
-                                  
-                                ?> <?php foreach( $images as $image ): ?>
                                         <div 
                                         class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0" 
-                                        data-value="<?php echo $count; ?>">
+                                        data-value="<?php ?>">
                                             <a 
                                             class="l-photos__overlay"
                                             href="#">
