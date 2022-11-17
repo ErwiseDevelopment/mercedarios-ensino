@@ -55,15 +55,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
             <div class="col-12">
 
                 <span class="d-block u-font-size-18 all:u-font-family-nunito">
-                    Com 60 anos de tradição, muitos passaram pelo nosso colégio, contribuindo para a construção de nossa história e outros ainda estão por vir.
-
-                    Olhando para trás, podemos ver um longo caminho percorrido com trabalho árduo, muito estudo, esforço e muita dedicação.  E assim, podemos perceber o quão importante foi e é nossa instituição para a formação de nossos alunos.
-
-                    O colégio está em constante movimento. A reflexão sobre os caminhos da educação, as novas possibilidades, a inovação e o contínuo aprimoramento dos professores e funcionários são fatores que nos levam ao objetivo final: a formação de pessoas conscientes de seus direitos e deveres, críticos e capazes de enfrentar o mercado de trabalho.
-
-                    O colégio conta um uma estrutura adequada, salas amplas, quadra esportiva, parque, laboratórios de tecnologia educacional e de ciências, salão para eventos e muito espaço. 
-
-                    Faça um tour 360º e conheça mais nossa estrutura física.
+                    <?php the_content() ?>
                 </span>
             </div>
         </div>
@@ -101,7 +93,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             href="#">
                                                 <img
                                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
+                                                src="<?php echo get_field('galeria_estrutura')?>"
                                                 alt="">
                                             </a>
                                         </div>
