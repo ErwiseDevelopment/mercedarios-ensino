@@ -94,12 +94,13 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                 alt="">
                                             </a>
                                         </div>
-                                <?php endforeach;  ;endif; ?>
+                               
                             </div>
                         </div>
                     <?php  ?>
                 </div>
             </div>
+            <?php endforeach;  ;endif; ?>
             <!-- end desktop -->
 
             <!-- mobile -->
