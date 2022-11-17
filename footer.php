@@ -125,7 +125,9 @@
             </div>
 
             <div class="row justify-content-end">
-
+            <div class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
+                            <p class="u-font-size-22 xxl:u-font-size-24 u-font-weight-extrabold u-font-family-nunito text-center u-color-white"><?php echo get_field('escola1', 'option')?></p>
+                        </div> 
                 <div class="col-lg-4 my-4 my-lg-0">
 
                 <ul 
@@ -177,6 +179,59 @@
                             <?php } endif;?>   
                         </ul>
                 </div>
+                <div class="col-lg-4 my-4 my-lg-0">
+                <div class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
+                            <p class="u-font-size-22 xxl:u-font-size-24 u-font-weight-extrabold u-font-family-nunito text-center u-color-white"><?php echo get_field('escola2', 'option')?></p>
+                        </div>                    
+                <ul 
+                        class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
+                            
+                            <?php if (!empty(get_field('spotify_redes_2', 'option'))):{?>
+                            <li class="u-list-style-none pr-2">
+                            <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__spotify rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white"  rel="noreferrer noopener"
+                                href="<?php echo get_field('spotify_redes_2', 'option')?>" <?php if (get_field('nova_guia_stf_2', 'option') == '1') :?>  target="_blank" <?php endif; ?>
+                                rel="noreferrer noopener">
+                                    Spotify
+                                </a>
+                            </li>
+                            <?php }  endif;?>   
+                                <?php if (!empty(get_field('facebook_redes_2', 'option'))):{?>        
+                            <li class="u-list-style-none pr-2">
+                                 <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__facebook rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white"  rel="noreferrer noopener"
+                                href="<?php echo get_field('facebook_redes_2', 'option')?>" <?php if (get_field('nova_guia_face_2', 'option') == '1') :?>  target="_blank" <?php endif; ?>
+                                rel="noreferrer noopener">
+                                    Facebook
+                                </a>
+                            </li>
+                             <?php } endif;?>     
+                             <?php if (!empty(get_field('instagram_redes_2', 'option'))):{?>  
+                            <li class="u-list-style-none pr-2">
+                                 <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram  rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white"  rel="noreferrer noopener"
+                                href="<?php echo get_field('instagram_redes_2', 'option')?>" <?php if (get_field('nova_guia_insta_2', 'option') == '1') :?>  target="_blank" <?php endif; ?>
+                                rel="noreferrer noopener">
+                                    Instagram
+                                </a>
+                            </li>
+                            <?php }endif;?>   
+                            <?php if (!empty(get_field('youtube_redes_2', 'option'))):{?>       
+                            <li class="u-list-style-none pr-2">
+                                 <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__youtube rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white" rel="noreferrer noopener"
+                                href="<?php echo get_field('youtube_redes_2', 'option')?>" <?php if (get_field('nova_guia_yt_2', 'option') == '1') :?>  target="_blank" <?php endif; ?> rel="noreferrer noopener">
+                                    Youtube
+                                </a>
+                            </li>
+                            <?php } else: endif;?>   
+                            <?php if (!empty(get_field('whatsapp_redes_2', 'option'))):{?>       
+                            <li class="u-list-style-none">
+                                <a 
+                                class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__whatsapp rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white" rel="noreferrer noopener"                                
+                                href="<?php echo get_field('whatsapp_redes_2', 'option')?>" <?php if (get_field('nova_guia_wpp_2', 'option') == '1') :?>  target="_blank" <?php endif; ?> rel="noreferrer noopener">
+                                    Whatsapp
+                                </a>
+                            </li>
+                            <?php } endif;?>   
+                        </ul>
+                </div>_2
             </div>
 
             <div class="row justify-content-center">
