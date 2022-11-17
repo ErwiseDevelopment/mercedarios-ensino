@@ -83,8 +83,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             <div class="row">
 
                                         <div 
-                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0" 
-                                        data-value="<?php ?>">
+                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
                                             <a 
                                             class="l-photos__overlay"
                                             href="#">
@@ -157,7 +156,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <div class="swiper-slide">
                                         <img
                                         class="l-modal-photos__image img-fluid w-100"
-                                        src="<?php echo $image[ 'url' ]; ?>"
+                                        src="<?php echo $image; ?>"
                                         alt="<?php the_title() ?>">
                                     </div>
                         <?php
