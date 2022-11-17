@@ -77,7 +77,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                     <?php for( $i = 0; $i < 4; $i++ ) { 
                         $images = get_field('galeria_estrutura');
                                         if( $images ): ?>
-                                         <?php foreach( $images as $image ): ?>
+                                        
                         <div class="col-lg-3 l-photos__col-child">
 
                             <div class="row">
@@ -87,7 +87,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     
                                     for( $j = 0; $j < 2; $j++ ) { 
                                         $count++
-                                ?>
+                                ?> <?php foreach( $images as $image ): ?>
                                         <div 
                                         class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0" 
                                         data-value="<?php echo $count; ?>">
@@ -100,7 +100,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                 alt="">
                                             </a>
                                         </div>
-                                <?php }; endforeach ;endif; ?>
+                                <?php endforeach;  }; ;endif; ?>
                             </div>
                         </div>
                     <?php } ?>
