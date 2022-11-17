@@ -124,11 +124,11 @@
                 </div>
             </div>
 
-            <div class="row"> 
+            <div class="row justify-content-end"> 
                 <div class="col-lg-4 my-4 my-lg-0">
 
                         <div class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
-                            <p class="u-font-size-22 xxl:u-font-size-24 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white"><?php echo get_field('escola1', 'option')?></p>
+                            <p class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden"><?php echo get_field('escola1', 'option')?></p>
                         </div> 
                
                         <ul class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
@@ -181,7 +181,7 @@
                 
                
                          <div class="d-flex justify-content-between justify-content-lg-center mb-0 px-5 px-lg-0">
-                            <p class="u-font-size-22 xxl:u-font-size-24 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white"><?php echo get_field('escola2', 'option')?></p>
+                            <p class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden"><?php echo get_field('escola2', 'option')?></p>
                         </div>                    
                         <ul class="d-flex justify-content-center justify-content-xl-start mb-0 pl-0">
                             
