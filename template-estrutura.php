@@ -82,33 +82,29 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                 <div class="row">
 
-                    <?php for( $i = 0; $i < 4; $i++ ) { ?>
+                    
                         <div class="col-lg-3 l-photos__col-child">
 
                             <div class="row">
 
                                 <?php 
-                                    $count = -1;
-                                    
-                                    for( $j = 0; $j < 2; $j++ ) { 
-                                        $count++
+                                  
                                 ?>
                                         <div 
-                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0" 
-                                        data-value="<?php echo $count; ?>">
+                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
                                             <a 
                                             class="l-photos__overlay"
                                             href="#">
                                                 <img
                                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/photo-1.png"
+                                                src="<?php echo get_field('galeria_estrutura')?>"
                                                 alt="">
                                             </a>
                                         </div>
-                                <?php } ?>
+                               
                             </div>
                         </div>
-                    <?php } ?>
+                   
                 </div>
             </div>
             <!-- end desktop -->
