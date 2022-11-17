@@ -6,6 +6,7 @@ function single_temas_scripts()
     wp_enqueue_style('single-temas-style', get_stylesheet_uri());
     wp_enqueue_style('single-temas-main-style', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/css/main.css');
     wp_enqueue_style('custom-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('single-temas-main-style', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/css/style.css');
 
     //js
     wp_enqueue_script('single-temas-swiper-scripts', get_template_directory_uri() . '/../wp-bootstrap-starter-child/assets/js/swiper.min.js', array(), '1.0.2', true);

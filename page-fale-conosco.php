@@ -139,7 +139,7 @@ style="background-image: url(<?php echo get_template_directory_uri()?>/../wp-boo
             <div class="col-12">
 
                 <div class="row">
-                    <div class=" col-11 col-lg-5">
+                    <div class="map-responsive">
                         <?php echo get_field('mapa', 'option')?>
                     </div>
                 </div>
