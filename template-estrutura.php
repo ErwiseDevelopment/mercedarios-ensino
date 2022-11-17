@@ -55,7 +55,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
             <div class="col-12">
 
                 <span class="d-block u-font-size-18 all:u-font-family-nunito">
-                    <?php the_content() ?>
+                  <?php the_content() ?>
                 </span>
             </div>
         </div>
@@ -74,7 +74,10 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                 <div class="row">
 
-                    <?php for( $i = 0; $i < 4; $i++ ) { ?>
+                    <?php for( $i = 0; $i < 4; $i++ ) { 
+                        $images = get_field('galeria_estrutura');
+                                        if( $images ): ?>
+                                         <?php foreach( $images as $image ): ?>
                         <div class="col-lg-3 l-photos__col-child">
 
                             <div class="row">
@@ -83,11 +86,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     $count = -1;
                                     
                                     for( $j = 0; $j < 2; $j++ ) { 
-                                        $count++;
-                                        $images = get_field('galeria_estrutura');
-                                        if( $images ): 
+                                        $count++
                                 ?>
-                                <?php foreach( $images as $image ): ?>
                                         <div 
                                         class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0" 
                                         data-value="<?php echo $count; ?>">
@@ -96,14 +96,14 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             href="#">
                                                 <img
                                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                src="<?php echo $image; ?>"
+                                                src="<?php echo $image?>"
                                                 alt="">
                                             </a>
                                         </div>
-                                        <?php endforeach; endif;?>
+                                <?php }; endforeach ;endif; ?>
                             </div>
                         </div>
-                    <?php };} ?>
+                    <?php } ?>
                 </div>
             </div>
             <!-- end desktop -->
