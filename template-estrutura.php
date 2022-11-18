@@ -167,9 +167,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         
                         <!-- slide -->
                         <?php
-                            if( $item ) :
-                                foreach( $chunk[$i] as $item ) :
-                                    setup_postdata($item);
+                            if(  $galleries ) :
+                                foreach(  $galleries as $item ) :
+                                  
                         ?>
                                     <div class="swiper-slide">
                                         <img
