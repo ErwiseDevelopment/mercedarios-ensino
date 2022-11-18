@@ -165,8 +165,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         
                         <!-- slide -->
                         <?php
-                            if( $images ) :
-                                foreach( $images as $item ) :
+                            // if( $images ) :
+                            //     foreach( $images as $item ) :
                         ?>
                                     <div class="swiper-slide">
                                         <img
@@ -175,8 +175,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                         alt="<?php the_title() ?>">
                                     </div>
                         <?php
-                                endforeach;
-                            endif;
+                            //     endforeach;
+                            // endif;
                         ?>
                         <!-- end slide -->
                     </div>
