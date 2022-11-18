@@ -107,7 +107,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <?php
                                         endforeach;
                                     ?>
-                                      <?php var_dump(  $chunk) ?>
+                                      
                                       <?php var_dump(  $count) ?>
                                       
                                 <!-- end item -->
