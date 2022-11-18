@@ -73,48 +73,30 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
             <div class="col-12 d-none d-lg-block">
 
                 <div class="row">
-                <?php 
-                        $posts_count = 1;
-                        
-                        for( $i = 0; $i < 4; $i++ ) { 
-                    ?>
-                            <div class="col-lg-3 l-photos__col-child">
+                        <?php 
+                        $images = get_field('galeria');
+                                        if( $images ): ?>
+                          <?php foreach( $images as $image ): ?> 
+                            
+                        <div class="col-lg-3 l-photos__col-child">
 
-                                <div class="row">
+                            <div class="row">
 
-                                    <!-- item -->
-                                    <?php
-                                        
-                                        $galleries = get_field('galeria_estrutura');
-                                        
-                                        $count = count($galleries);
-                                        $chunk = array_chunk($galleries, ceil($count / 4));
-
-                                        foreach( $chunk[$i] as $item ) :
-                                            setup_postdata($item);
-                                    ?>  
-                                            <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
-                                                <a 
-                                                class="l-photos__overlay"
-                                                href="">
-                                                    <img
-                                                    class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                    src="<?php echo  $item; ?>"
-                                                    alt="<?php echo $item->post_title; ?>">
-                                                </a>
-                                                <?php var_dump(  $chunk) ?>
-                                            </div>
-                                    <?php
-                                        endforeach;
-                                    ?>
-                                <!-- end item -->
-                                </div>
+                                        <div 
+                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
+                                            <a 
+                                            class="l-photos__overlay"
+                                            href="#">
+                                                <img
+                                                class="img-fluid w-100 h-100 u-object-fit-cover"
+                                                src="<?php echo $image?>"
+                                                alt="">
+                                            </a>
+                                        </div>
+                               
                             </div>
-                    <?php  
-                            if( $posts_count == 8 )
-                                break;
-                        } 
-                    ?>
+                        </div>
+                        <?php endforeach;  ;endif; ?>
                 </div>
             </div>
            
@@ -135,7 +117,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             href="#">
                                 <img
                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                src="<?php echo  $item; ?>"
+                                src="<?php  ?>"
                                 alt="">
                             </a>
                         </div>
@@ -168,14 +150,13 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         
                         <!-- slide -->
                         <?php
-                            if(  $galleries ) :
-                                foreach(  $galleries as $item ) :
-                                  
+                            if( $images ) :
+                                foreach( $images as $image ) :
                         ?>
                                     <div class="swiper-slide">
                                         <img
                                         class="l-modal-photos__image img-fluid w-100"
-                                        src="<?php echo $item; ?>"
+                                        src="<?php echo $image; ?>"
                                         alt="<?php the_title() ?>">
                                     </div>
                         <?php
