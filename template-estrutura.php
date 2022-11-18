@@ -68,7 +68,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
     <div class="container-fluid">
 
         <div class="row">
-                            
+                    <?php 
+                        $posts_count = 1;
+                        
+                        for( $i = 0; $i < 4; $i++ ) { 
+                    ?>           
             <!-- desktop -->
             <div class="col-12 d-none d-lg-block">
 
@@ -76,8 +80,13 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <?php 
                         $images = get_field('galeria');
                                         if( $images ): ?>
-                          <?php foreach( $images as $image ): ?> 
-                            
+                          <?php foreach( $images as $image ): 
+                            $count = count($images);
+                            $chunk = array_chunk($images, ceil($count / 4));
+
+                                        foreach( $chunk[$i] as $item ) :
+                                            setup_postdata($item);?> 
+
                         <div class="col-lg-3 l-photos__col-child">
 
                             <div class="row">
@@ -89,14 +98,19 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             href="#">
                                                 <img
                                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                src="<?php echo $image?>"
+                                                src="<?php echo $item?>"
                                                 alt="">
                                             </a>
                                         </div>
                                
                             </div>
                         </div>
-                        <?php endforeach;  ;endif; ?>
+                        <?php endforeach;endforeach;  endif; ?>
+                        <?php  
+                            if( $posts_count == 8 )
+                                break;
+                        } 
+                    ?>
                 </div>
             </div>
            
