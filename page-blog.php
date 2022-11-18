@@ -127,9 +127,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                  <?php echo $rest_post->title->rendered; ?>
                                 </h3>
 
-                                <p class="u-font-size-15 xl:u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-nunito u-color-folk-white text-decoration-none">
+                                <span class="u-font-size-15 xl:u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-nunito u-color-folk-white text-decoration-none">
                                     <?php echo $rest_post->excerpt->rendered; ?>
-                                </p>
+                                </span>
 
                                 <span class="l-blog__plus">+</span>
                             </div>
