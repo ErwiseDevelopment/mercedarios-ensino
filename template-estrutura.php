@@ -108,7 +108,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                         endforeach;
                                     ?>
                                       
-                                      <?php var_dump(  $count) ?>
+                                      <?php var_dump(  $item) ?>
                                       
                                 <!-- end item -->
                                 </div>
