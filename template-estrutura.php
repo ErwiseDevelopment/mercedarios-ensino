@@ -166,12 +166,12 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <!-- slide -->
                         <?php
                             if( $images ) :
-                                foreach( $images as $image ) :
+                                foreach( $images as $item ) :
                         ?>
                                     <div class="swiper-slide">
                                         <img
                                         class="l-modal-photos__image img-fluid w-100"
-                                        src="<?php echo $image; ?>"
+                                        src="<?php echo $item; ?>"
                                         alt="<?php the_title() ?>">
                                     </div>
                         <?php
