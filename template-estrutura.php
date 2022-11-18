@@ -82,18 +82,14 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
     '                       <div class="row">
                                 <?php 
-                                $images = get_field('galeria');
-                                    
+                                    $images = get_field('galeria');
                                     $count = count($images);
                                     $chunk = array_chunk($images, ceil($count / 4));
 
-                                            foreach( $chunk[$i] as $item ) :
-                                                setup_postdata($item);?> 
-
-                      
-
-                                        <div 
-                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
+                                    foreach( $chunk[$i] as $item ) :
+                                        setup_postdata($item);
+                                ?> 
+                                    <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
                                             <a 
                                             class="l-photos__overlay"
                                             href="#">
@@ -102,16 +98,15 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                 src="<?php echo $item?>"
                                                 alt="">
                                             </a>
-                                        </div>
-                               <?php endforeach; ?>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
-                        
                         <?php  
-                            if( $posts_count == 8 )
+                            if( $posts_count == 20 )
                                 break;
                         } 
-                    ?>
+                        ?>
                 </div>
             </div>
            
