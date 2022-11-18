@@ -80,7 +80,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <?php 
                         $images = get_field('galeria');
                                         if( $images ): ?>
-                          <?php foreach( $images as $image ): 
+                          <?php 
                             $count = count($images);
                             $chunk = array_chunk($images, ceil($count / 4));
 
@@ -105,7 +105,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                
                             </div>
                         </div>
-                        <?php endforeach;endforeach;  endif; ?>
+                        <?php endforeach; endif; ?>
                         <?php  
                             if( $posts_count == 8 )
                                 break;
