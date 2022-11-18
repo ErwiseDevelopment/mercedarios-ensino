@@ -99,7 +99,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                 href="<?php echo get_home_url( null, '/' . $item->post_type . '/' . $item->post_name ); ?>">
                                                     <img
                                                     class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                    src="<?php echo get_field( 'capa_do_album', $item->ID ); ?>"
+                                                    src="<?php echo  $item; ?>"
                                                     alt="<?php echo $item->post_title; ?>">
                                                 </a>
                                             </div>
