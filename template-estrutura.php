@@ -96,7 +96,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                             <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
                                                 <a 
                                                 class="l-photos__overlay"
-                                                href="<?php echo get_home_url( null, '/' . $item->post_type . '/' . $item->post_name ); ?>">
+                                                href="">
                                                     <img
                                                     class="img-fluid w-100 h-100 u-object-fit-cover"
                                                     src="<?php echo  $item; ?>"
@@ -167,13 +167,14 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         
                         <!-- slide -->
                         <?php
-                            if( $images ) :
-                                foreach( $images as $image ) :
+                            if( $item ) :
+                                foreach( $chunk[$i] as $item ) :
+                                    setup_postdata($item);
                         ?>
                                     <div class="swiper-slide">
                                         <img
                                         class="l-modal-photos__image img-fluid w-100"
-                                        src="<?php echo $image; ?>"
+                                        src="<?php echo $item; ?>"
                                         alt="<?php the_title() ?>">
                                     </div>
                         <?php
