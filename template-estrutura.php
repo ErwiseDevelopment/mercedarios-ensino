@@ -132,7 +132,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             href="#">
                                 <img
                                 class="img-fluid w-100 h-100 u-object-fit-cover"
-                                src="<?php  ?>"
+                                src="<?php echo $item; ?>"
                                 alt="">
                             </a>
                         </div>
