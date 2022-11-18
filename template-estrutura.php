@@ -102,11 +102,14 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                     src="<?php echo  $item; ?>"
                                                     alt="<?php echo $item->post_title; ?>">
                                                 </a>
-                                                <?php var_dump(  $chunk) ?>
+                                              
                                             </div>
                                     <?php
                                         endforeach;
                                     ?>
+                                      <?php var_dump(  $chunk) ?>
+                                      <?php var_dump(  $count) ?>
+                                      
                                 <!-- end item -->
                                 </div>
                             </div>
