@@ -77,6 +77,10 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
             <div class="col-12 d-none d-lg-block">
 
                 <div class="row">
+
+                     <div class="col-lg-3 l-photos__col-child">
+
+'                   <div class="row">
                         <?php 
                         $images = get_field('galeria');
                                
@@ -86,9 +90,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                         foreach( $chunk[$i] as $item ) :
                                             setup_postdata($item);?> 
 
-                        <div class="col-lg-3 l-photos__col-child">
-
-                            <div class="row">
+                      
 
                                         <div 
                                         class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
