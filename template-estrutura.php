@@ -73,30 +73,47 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
             <div class="col-12 d-none d-lg-block">
 
                 <div class="row">
-                        <?php 
-                        $images = get_field('galeria');
-                                        if( $images ): ?>
-                          <?php foreach( $images as $image ): ?> 
-                            
-                        <div class="col-lg-3 l-photos__col-child">
+                <?php 
+                        $posts_count = 1;
+                        
+                        for( $i = 0; $i < 4; $i++ ) { 
+                    ?>
+                            <div class="col-lg-3 l-photos__col-child">
 
-                            <div class="row">
+                                <div class="row">
 
-                                        <div 
-                                        class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
-                                            <a 
-                                            class="l-photos__overlay"
-                                            href="#">
-                                                <img
-                                                class="img-fluid w-100 h-100 u-object-fit-cover"
-                                                src="<?php echo $image?>"
-                                                alt="">
-                                            </a>
-                                        </div>
-                               
+                                    <!-- item -->
+                                    <?php
+                                        
+                                        $galleries = get_field('galeria_estrutura');
+                                        
+                                        $count = count($galleries);
+                                        $chunk = array_chunk($galleries, ceil($count / 4));
+
+                                        foreach( $chunk[$i] as $item ) :
+                                            setup_postdata($item);
+                                    ?>  
+                                            <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center px-0">
+                                                <a 
+                                                class="l-photos__overlay"
+                                                href="<?php echo get_home_url( null, '/' . $item->post_type . '/' . $item->post_name ); ?>">
+                                                    <img
+                                                    class="img-fluid w-100 h-100 u-object-fit-cover"
+                                                    src="<?php echo get_field( 'capa_do_album', $item->ID ); ?>"
+                                                    alt="<?php echo $item->post_title; ?>">
+                                                </a>
+                                            </div>
+                                    <?php
+                                        endforeach;
+                                    ?>
+                                <!-- end item -->
+                                </div>
                             </div>
-                        </div>
-                        <?php endforeach;  ;endif; ?>
+                    <?php  
+                            if( $posts_count == 8 )
+                                break;
+                        } 
+                    ?>
                 </div>
             </div>
            
