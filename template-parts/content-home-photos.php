@@ -97,7 +97,7 @@
 
             <div class="col-12 px-0">
                 <p class="u-font-size-16 lg:u-font-size-22 xxl:u-font-size-30 u-font-weight-bold u-font-family-nunito text-center u-color-folk-white u-bg-folk-bold-marron mb-0 py-2">
-                    Há 60 anos escrevendo um futuro promissor
+                   <?php echo get_field('titulo_fotos'); ?>
                 </p>
             </div>
 
@@ -110,7 +110,7 @@
                     <div class="col-9 col-lg-3">
                         <a
                         class="w-100 rounded-pill d-block u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-bold-marron hover:u-color-folk-white u-bg-folk-light-yellow hover:u-bg-folk-dark-marron py-2"
-                        href="#">
+                        href="<?php echo get_home_url (null, '/' . get_field('link_fotos'))?>"  <?php if (get_field('nova_guia_foto', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                             Confira nossas fotos!
                         </a>
                     </div>

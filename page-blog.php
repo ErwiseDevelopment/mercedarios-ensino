@@ -52,6 +52,33 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
     <div class="container">
 
         <div class="row justify-content-center">
+            <?php
+		//idosos
+		//terceira	
+
+		$word = 'alimentação';
+
+		$link_pattern = get_field( 'link_padrao_portal', 'option' );
+		$post_link = $link_pattern . get_field( 'link_noticia', 'option' );
+		$request_posts = wp_remote_get( $post_link );
+
+		if(!is_wp_error( $request_posts )) :
+			$body = wp_remote_retrieve_body( $request_posts );
+			$data = json_decode( $body );
+
+			if(!is_wp_error( $data )) :
+				foreach( $data as $rest_post ) :
+					if (strpos($rest_post->title->rendered, $word) !== false) :
+	?>
+						<h1>
+							<?php echo $rest_post->title->rendered; ?>
+						</h1>
+	<?php
+					endif;
+				endforeach;
+			endif;
+		endif;
+	?>
 
             <div class="col-lg-10">
 
