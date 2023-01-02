@@ -75,8 +75,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                     <form>
 
                         <div class="row justify-content-center">
+                        <?php echo do_shortcode( '[contact-form-7 id="342" title="Trabalho conosco"]' ); ?>
 
-                            <div class="col-12 my-2 px-lg-5">
+                            <!-- <div class="col-12 my-2 px-lg-5">
                                 <input 
                                 class="w-100 outline-0 border-0 d-block u-font-size-18 xxl:u-font-size-22 u-font-weight-regular u-font-family-nunito u-color-folk-gray p-3"
                                 type="text"
@@ -150,7 +151,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 class="c-input-submit-float py-2"
                                 type="submit"
                                 value="Enviar">
-                            </div>
+                            </div> -->
                         </div>
                     </form>
                 </div>
