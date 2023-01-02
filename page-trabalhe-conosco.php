@@ -71,11 +71,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             Envie seus dados e aguarde nosso contato!
                         </p>
                     </div>
-
-                    <form>
+                    <?php echo do_shortcode( '[contact-form-7 id="342" title="Trabalho conosco"]' ); ?>
+                    <!-- <form>
 
                         <div class="row justify-content-center">
-                        <?php echo do_shortcode( '[contact-form-7 id="342" title="Trabalho conosco"]' ); ?>
+                         -->
 
                             <!-- <div class="col-12 my-2 px-lg-5">
                                 <input 
@@ -152,8 +152,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 type="submit"
                                 value="Enviar">
                             </div> -->
-                        </div>
-                    </form>
+                        <!-- </div>
+                    </form> -->
                 </div>
             </div>
         </div>
