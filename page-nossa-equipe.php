@@ -103,7 +103,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                 <?php
                                                         $categoria = get_the_terms( get_the_ID(), 'areas' );
                                                         $cat = array();
-                                                        $conta = count($cat = $category->tERM_ID);
+                                                       //$conta = count($cat = $category->tERM_ID);
 
                                                         foreach( $categoria as $category ) :
                                                             //$categorias =  $category->name;
