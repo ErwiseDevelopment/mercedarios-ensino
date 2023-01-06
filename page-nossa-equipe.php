@@ -108,7 +108,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         foreach( $categoria as $category ) :
                                                             //$categorias =  $category->name;
                                                            
-                                                                if ( $conta > 1 ) :{
+                                                                if ( $conta  ) :{
                                                                     echo $category->name . ','; };
                                                                 else:
                                                                     echo $category->name  ;
