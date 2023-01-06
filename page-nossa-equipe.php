@@ -118,7 +118,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                                                      
                                                     
-                                                    echo var_dump($cat , $conta , $categoria )
+                                                    echo var_dump($categoria, $category )
                                                     ?>
                                             </p>
                                         </div>
