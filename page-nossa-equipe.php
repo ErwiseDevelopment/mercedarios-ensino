@@ -107,7 +107,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         foreach( $categoria as $category ) :
                                                             $categorias =  $category->name;
                                                             $cat = $categorias ;
-                                                                if ($cat < 1 ) :{
+                                                                if ($cat <= 1 ) :{
                                                                     echo $category->name;  
                                                             };
                                                             else :{
