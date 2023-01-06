@@ -105,9 +105,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         $cat = array();
 
                                                         foreach( $categoria as $category ) :
-                                                            $categorias =  $category->name;
-                                                            $cat = $categorias ;
-                                                                if ($cat <= 1 ) :{
+                                                            //$categorias =  $category->name;
+                                                           
+                                                                if ( count($cat = $category->tERM_ID) <= 1 ) :{
                                                                     echo $category->name;  
                                                             };
                                                             else :{
@@ -118,7 +118,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                                                      
                                                     
-                                                    echo var_dump($cat , $category->name , $categoria )
+                                                    //echo var_dump($cat , $category->name , $categoria )
                                                     ?>
                                             </p>
                                         </div>
