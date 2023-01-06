@@ -104,7 +104,13 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         $categoria = get_the_terms( get_the_ID(), 'areas' );
 
                                                         foreach( $categoria as $category ) :
+                                                            if ($category->name > 1) :{
                                                             echo $category->name . ',';
+                                                            };
+                                                            else :{
+                                                                echo $category->name;
+                                                            }
+                                                            endif;
                                                         endforeach;
 
                                                      
