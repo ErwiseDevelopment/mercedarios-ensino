@@ -103,11 +103,12 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                 <?php
                                                         $categoria = get_the_terms( get_the_ID(), 'areas' );
                                                         $cat = array();
+                                                        $conta = count($cat = $category->tERM_ID);
 
                                                         foreach( $categoria as $category ) :
                                                             //$categorias =  $category->name;
                                                            
-                                                                if ( count($cat = $category->tERM_ID) > 1 ) :{
+                                                                if ( $conta > 1 ) :{
                                                                     echo $category->name . ','; };
                                                                 else:
                                                                     echo $category->name  ;
@@ -117,7 +118,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                                                      
                                                     
-                                                    //echo var_dump($cat , $category->name , $categoria )
+                                                    echo var_dump($cat , $conta , $categoria )
                                                     ?>
                                             </p>
                                         </div>
