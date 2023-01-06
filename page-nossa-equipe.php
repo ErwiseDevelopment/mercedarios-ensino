@@ -107,12 +107,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         foreach( $categoria as $category ) :
                                                             //$categorias =  $category->name;
                                                            
-                                                                if ( count($cat = $category->tERM_ID) <= 1 ) :{
-                                                                    echo $category->name;  
-                                                            };
-                                                            else :{
-                                                                echo $category->name . ',' ;
-                                                            }
+                                                                if ( count($cat = $category->tERM_ID) > 1 ) :{
+                                                                    echo $category->name . ','; };
+                                                                else:
+                                                                    echo $category->name  ;
+                                                            
                                                             endif;
                                                         endforeach;
 
