@@ -108,17 +108,17 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                                         foreach( $categoria as $category ) :
                                                             //$categorias =  $category->name;
                                                            
-                                                                // if ( $conta  ) :{
-                                                                //     echo $category->name . ','; };
-                                                                // else:
+                                                                if ( $category->name > 1 ) :{
+                                                                  echo $category->name . ','; };
+                                                                else:
                                                                     echo $category->name  ;
                                                             
-                                                            //endif;
+                                                            endif;
                                                         endforeach;
 
                                                      
                                                     
-                                                    echo var_dump($categoria, $category )
+                                                    //echo var_dump( $category )
                                                     ?>
                                             </p>
                                         </div>
