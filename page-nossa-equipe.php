@@ -118,7 +118,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                                                      
                                                     
-                                                    // echo var_dump($post_categories)
+                                                    echo var_dump($cat , $category->name)
                                                     ?>
                                             </p>
                                         </div>
