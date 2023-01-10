@@ -36,7 +36,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                     alt="Ícone mais">
 
                     <h1 class="d-inline-block u-font-size-32 xl:u-font-size-48 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white mb-0 ml-3">
-                        Estrutura
+                        <?php echo get_the_title();?>
                     </h1>
                 </div>
             </div>
@@ -92,7 +92,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <div class="col-12 l-photos__item-child d-flex justify-content-center align-items-center js-photos px-0">
                                             <a 
                                             class="l-photos__overlay"
-                                            href="#">
+                                            >
                                                 <img
                                                 class="img-fluid w-100 h-100 u-object-fit-cover"
                                                 src="<?php echo $item?>"
