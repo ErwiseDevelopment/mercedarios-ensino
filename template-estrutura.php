@@ -80,7 +80,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                     ?>        
                      <div class="col-lg-3 l-photos__col-child">
 
-    '                       <div class="row">
+                          <div class="row">
                                 <?php 
                                     $images = get_field('galeria');
                                     $count = count($images);

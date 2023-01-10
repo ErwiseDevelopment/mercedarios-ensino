@@ -85,7 +85,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                     <!-- item -->
                                     <?php
                                         
-                                        $galleries = get_field('galeria');
+                                        $galleries = get_field('galeria_estrutura');
                                         
                                         $count = count($galleries);
                                         $chunk = array_chunk($galleries, ceil($count / 4));
