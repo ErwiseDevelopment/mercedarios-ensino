@@ -62,7 +62,7 @@
                         <div class="col-lg-3 my-2 my-lg-0">
 
                             <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
-                                Nossos Cursos
+                                 Etapas de Ensino
                             </h4>
 
                             <div class="d-flex">

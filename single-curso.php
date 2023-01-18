@@ -99,9 +99,11 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 				<div class="row justify-content-center">
 
 					<div class="col-11 col-lg-5">
-						<h3 class="c-title-pattern py-4">
-							Calendário 2022
-						</h3>
+						<a href="<?php echo get_home_url(null, '/calendario') ?>">	
+							<h3 class="c-title-pattern py-4">
+							Calendário <?php echo date('Y')?>
+							</h3>
+						</a>
 					</div>
 				</div>
 			</div>
