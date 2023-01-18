@@ -32,7 +32,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                     alt="Ícone mais">
 
                     <h1 class="d-inline-block u-font-size-32 xl:u-font-size-48 xxl:u-font-size-54 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white mb-0 ml-3">
-                        Cursos
+					Etapas de Ensino
                     </h1>
                 </div>
             </div>
