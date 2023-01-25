@@ -111,13 +111,12 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         <div class="col-lg-4 my-3">
 
                             <a 
-                            class="card h-100 border-0 rounded-0 text-decoration-none"
+                            class="card border-0 rounded-0 text-decoration-none"
                             href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
 
                                 <div class="card-img w-100">
                                     <img
                                     class="img-fluid w-100 u-object-fit-cover"
-										 style="height:230px"
                                         src="<?php echo $rest_post->featured_image_src; ?>"
                                         alt="<?php echo $rest_post->title->rendered; ?>">
                                 </div>
@@ -125,7 +124,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                 <div 
                                 class="card-body pr-5"
                                 style="background-color:#9D1922">
-                                    <h3 class="c-title-limit u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito u-color-folk-white">
+                                    <h3 class="u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito u-color-folk-white">
                                      <?php echo $rest_post->title->rendered; ?>
                                     </h3>
                                 </div>
