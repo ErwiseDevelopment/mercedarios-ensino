@@ -140,7 +140,7 @@ style="border-top:5px solid;">
                     ?>
 						<div class="col-lg-3 my-3 my-lg-0">
 							<a 
-							class="card border-0 rounded-0 text-decoration-none"
+							class="card border-0 rounded-0 text-decoration-none h-100"
 							href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
 
 								<div class="card-img w-100">
@@ -153,7 +153,7 @@ style="border-top:5px solid;">
 								<div 
 								class="card-body pr-5"
 								style="background-color:#9D1922">
-									<h3 class="u-font-size-14 xxl:u-font-size-18 u-font-weight-bold u-font-family-nunito u-color-folk-white">
+									<h3 class="u-font-size-14 xxl:u-font-size-18 u-font-weight-bold u-font-family-nunito u-color-folk-white c-title-limit">
 										<?php echo $rest_post->title->rendered; ?>
 									</h3>
 								</div>
