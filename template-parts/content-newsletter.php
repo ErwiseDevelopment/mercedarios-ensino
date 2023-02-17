@@ -67,7 +67,7 @@
 
                         <a
                         class="d-flex align-items-center text-decoration-none mb-4"
-                        href="<?php echo get_field('instagram_redes', 'option');?>">
+                        href="<?php echo "https://instagram.com/" .get_field('instagram_redes', 'option')?>" <?php if (get_field('nova_guia_insta', 'option') == '1') :?>  target="_blank" <?php endif; ?>>
                             <div>
                                 <span 
                                 class="u-icon__brands u-icon__instagram shadow-sm rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-32 text-decoration-none u-color-folk-white u-bg-folk-bold-marron"
@@ -81,11 +81,11 @@
                             ?>
                             <div class="pl-2">
                                 <p class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-font-family-nunito u-color-folk-bold-marron mb-0">
-                                    @<?php echo  $user?>
+                                    @<?php echo  $instagram ?>
                                 </p>
 
                                 <p class="u-font-size-15 xxl:u-font-size-18 u-font-weight-regular u-font-family-nunito u-color-folk-very-gray mb-0">
-                                    #<?php echo  $user?>
+                                    #<?php echo $instagram ?>
                                 </p>
                             </div>
                         </a>
