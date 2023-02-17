@@ -147,7 +147,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 										<div class="card-body px-5">
 
 											<div class="l-teaching__box d-flex justify-content-center align-items-end pb-3">
-												<h3 class="u-font-size-22 xxl:u-font-size-28  u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white">
+												<h3 class="u-font-size-22 xxl:u-font-size-27 u-font-weight-extrabold u-font-family-nunito text-center u-color-folk-white">
 													<?php the_title() ?>
 												</h3>
 											</div>
