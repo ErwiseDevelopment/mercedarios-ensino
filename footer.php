@@ -103,6 +103,7 @@
                             </h4>
 
                             <ul class="mb-0 pl-0">
+                            <?php if (!empty(get_field('privacidade', 'option'))):{?> 
                                 <li class="u-list-style-none mb-2">
                                     <a 
                                     class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white"
@@ -110,7 +111,8 @@
                                         Política de privacidade
                                     </a>
                                 </li>
-
+                                <?php }  endif;?>
+                                <?php if (!empty(get_field('cookies', 'option'))):{?> 
                                 <li class="u-list-style-none mb-2">
                                     <a 
                                     class="u-font-size-14 u-font-weight-medium u-font-family-lato u-color-folk-white"
@@ -118,6 +120,7 @@
                                         Política de Cookies
                                     </a>
                                 </li>
+                                <?php }  endif;?>
                             </ul>
                         </div>
                     </div>
