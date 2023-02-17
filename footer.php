@@ -96,7 +96,7 @@
                                 </ul>
                             </div>
                         </div>
-
+                        <?php if (!empty(get_field('privacidade', 'option')) || !empty(get_field('privacidade', 'option'))) :{?> 
                         <div class="col-lg-4 my-2 my-lg-0">
                             <h4 class="u-font-size-15 u-font-weight-bold u-font-family-lato u-color-folk-dark-golden">
                                 Links
@@ -123,6 +123,7 @@
                                 <?php }  endif;?>
                             </ul>
                         </div>
+                        <?php }  endif;?>
                     </div>
                 </div>
             </div>
