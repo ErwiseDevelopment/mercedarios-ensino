@@ -126,6 +126,7 @@ style="border-top:5px solid;">
 						$post_link = $link_pattern . get_field( 'link_caminho', 'option' ) . get_field( 'link_noticia', 'option' );
 						$request_posts = wp_remote_get( $post_link );
                         $count = 0;
+						
 
                         if(!is_wp_error( $request_posts )) :
                             $body = wp_remote_retrieve_body( $request_posts );

@@ -154,7 +154,7 @@
                              <?php if (!empty(get_field('instagram_redes', 'option'))):{?>  
                             <li class="u-list-style-none pr-2">
                                  <a class="px:u-w-32 px:u-h-32 u-icon__brands u-icon__instagram  rounded-pill d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-18 u-font-weight-regular text-decoration-none u-color-folk-dark-marron u-bg-folk-dark-golden hover:u-bg-folk-white"  rel="noreferrer noopener"
-                                href="<?php echo get_field('instagram_redes', 'option')?>" <?php if (get_field('nova_guia_insta', 'option') == '1') :?>  target="_blank" <?php endif; ?>
+                                 href="<?php echo "https://instagram.com/" .get_field('instagram_redes', 'option')?>" <?php if (get_field('nova_guia_insta', 'option') == '1') :?>  target="_blank" <?php endif; ?>
                                 rel="noreferrer noopener">
                                     Instagram
                                 </a>

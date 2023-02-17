@@ -67,6 +67,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             type="text"
                             name="s"
                             placeholder="Pesquise um conteúdo">
+,
+,
+,
 
                             <button
                             class="c-search-field__submit"
