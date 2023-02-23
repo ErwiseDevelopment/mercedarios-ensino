@@ -65,7 +65,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             <input 
                             class="c-search-field py-3 px-4"
                             type="text"
-                            name="s"
+                            name="p"
                             placeholder="Pesquise um conteúdo">
                             <button
                             class="c-search-field__submit"
