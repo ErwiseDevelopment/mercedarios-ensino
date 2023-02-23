@@ -102,6 +102,8 @@ get_header(); ?>
                                    
             <?php           
                                 endif;
+                            else:
+                                echo 'else';
                             endif;
                         endforeach;
                     endif; 
