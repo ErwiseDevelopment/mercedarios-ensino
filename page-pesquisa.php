@@ -27,15 +27,6 @@ get_header(); ?>
 
             <!-- loop -->
             <?php
-            //    $email  = 'Os veneráveis da Ordem Mercedária: quem são eles' . '<br>';
-            //    $domain = strstr($email, 'Ordem');
-               
-            //    if(strstr($email, $domain)) {
-            //        echo 'IF<br>';
-            //    } else {
-            //        echo 'ELSE<br>';
-            //    }
-
                 if( isset($_GET['p'] ) )
                     $search = $_GET['p'];
 
@@ -101,6 +92,7 @@ get_header(); ?>
                                    
             <?php           
                                 endif;
+                            else: echo 'else';
                             endif;
                         endforeach;
                     endif; 
