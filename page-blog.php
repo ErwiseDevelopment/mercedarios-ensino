@@ -53,11 +53,6 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
         <div class="row justify-content-center">
             <?php
-		//idosos
-		//terceira	
-
-		$word = 'alimentação';
-
 		$link_pattern = get_field( 'link_padrao_portal', 'option' );
 		$post_link = $link_pattern . get_field( 'link_noticia', 'option' );
 		$request_posts = wp_remote_get( $post_link );
@@ -82,9 +77,9 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
             <div class="col-lg-10">
 
-                <form
+            <form
                 method="GET"
-                action="<?php echo get_home_url( null, '/' ) ?>">
+                action="<?php echo get_home_url( null, '/pesquisa' ) ?>">
 
                     <div class="row">
 
@@ -92,9 +87,8 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                             <input 
                             class="c-search-field py-3 px-4"
                             type="text"
-                            name="s"
+                            name="p"
                             placeholder="Pesquise um conteúdo">
-
                             <button
                             class="c-search-field__submit"
                             type="submit">
