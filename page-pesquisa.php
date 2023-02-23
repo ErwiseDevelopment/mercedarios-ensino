@@ -52,24 +52,53 @@ get_header(); ?>
                             if( $search ) :
                                 if(strstr($rest_post->title->rendered, $search)) :    
             ?>
-                                    <div class="col-12 my-3">
+<section class="py-5">
 
-                                        <div class="row">
+<div class="container">
 
-                                            <div class="col-4">
-                                                <img 
-                                                class="img-fluid w-100"
-                                                src="<?php echo $rest_post->featured_image_src; ?>"
-                                                alt="">
-                                            </div>
+    <div class="row">
 
-                                            <div class="col-8">
-                                                <h3>
-                                                    <strong>Título:</strong> <?php echo $rest_post->title->rendered; ?>
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div class="col-12">
+
+            <div class="row">
+
+            
+                    <div class="col-lg-4 my-3">
+
+                        <a 
+                        class="card h-100 border-0 rounded-0 text-decoration-none"
+                        href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
+
+                            <div class="card-img w-100">
+                                <img
+                                class="img-fluid w-100 u-object-fit-cover"
+                                     style="height:230px"
+                                    src="<?php echo $rest_post->featured_image_src; ?>"
+                                    alt="<?php echo $rest_post->title->rendered; ?>">
+                            </div>
+
+                            <div 
+                            class="card-body pr-5"
+                            style="background-color:#9D1922">
+                                <h3 class="c-title-limit u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito u-color-folk-white">
+                                 <?php echo $rest_post->title->rendered; ?>
+                                </h3>
+                            </div>
+
+                            <span 
+                            class="u-line-height-100 position-absolute u-font-size-62 u-font-weight-extrabold u-font-family-nunito u-color-folk-yellow"
+                            style="bottom:.5rem;right:.5rem">
+                                +
+                            </span>
+                        </a>
+                    </div>
+                <!-- end loop -->
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+                                   
             <?php           
                                 endif;
                             endif;
