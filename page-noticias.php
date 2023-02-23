@@ -57,7 +57,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
                 <form
                 method="GET"
-                action="<?php echo get_home_url( null, '/' ) ?>">
+                action="<?php echo get_home_url( null, '/pesquisa' ) ?>">
 
                     <div class="row">
 
