@@ -40,54 +40,56 @@ get_header(); ?>
 
                     if(!is_wp_error( $data )) :
                         foreach( $data as $rest_post ) :
+                                var_dump($rest_post);
                             if( $search ) :
+                                echo 'if';
                                if(strstr($rest_post->title->rendered, $search)) :    
             ?>
-<section class="py-5">
+                <section class="py-5">
 
-<div class="container">
+                <div class="container">
 
-    <div class="row">
+                    <div class="row">
 
-        <div class="col-12">
+                        <div class="col-12">
 
-            <div class="row">
+                            <div class="row">
 
-            
-                    <div class="col-lg-4 my-3">
+                            
+                                    <div class="col-lg-4 my-3">
 
-                        <a 
-                        class="card h-100 border-0 rounded-0 text-decoration-none"
-                        href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
+                                        <a 
+                                        class="card h-100 border-0 rounded-0 text-decoration-none"
+                                        href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
 
-                            <div class="card-img w-100">
-                                <img
-                                class="img-fluid w-100 u-object-fit-cover"
-                                     style="height:230px"
-                                    src="<?php echo $rest_post->featured_image_src; ?>"
-                                    alt="<?php echo $rest_post->title->rendered; ?>">
-                            </div>
+                                            <div class="card-img w-100">
+                                                <img
+                                                class="img-fluid w-100 u-object-fit-cover"
+                                                    style="height:230px"
+                                                    src="<?php echo $rest_post->featured_image_src; ?>"
+                                                    alt="<?php echo $rest_post->title->rendered; ?>">
+                                            </div>
 
-                            <div 
-                            class="card-body pr-5"
-                            style="background-color:#9D1922">
-                                <h3 class="c-title-limit u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito u-color-folk-white">
-                                 <?php echo $rest_post->title->rendered; ?>
-                                </h3>
-                            </div>
+                                            <div 
+                                            class="card-body pr-5"
+                                            style="background-color:#9D1922">
+                                                <h3 class="c-title-limit u-font-size-20 xxl:u-font-size-24 u-font-weight-bold u-font-family-nunito u-color-folk-white">
+                                                <?php echo $rest_post->title->rendered; ?>
+                                                </h3>
+                                            </div>
 
-                            <span 
-                            class="u-line-height-100 position-absolute u-font-size-62 u-font-weight-extrabold u-font-family-nunito u-color-folk-yellow"
-                            style="bottom:.5rem;right:.5rem">
-                                +
-                            </span>
-                        </a>
-                    </div>
+                                            <span 
+                                            class="u-line-height-100 position-absolute u-font-size-62 u-font-weight-extrabold u-font-family-nunito u-color-folk-yellow"
+                                            style="bottom:.5rem;right:.5rem">
+                                                +
+                                            </span>
+                                        </a>
+                                    </div>
                 <!-- end loop -->
-            </div>
-        </div>
-    </div>
-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </section>
                                    
             <?php           
