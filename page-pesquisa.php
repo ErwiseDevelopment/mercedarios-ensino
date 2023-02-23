@@ -50,8 +50,7 @@ get_header(); ?>
                     if(!is_wp_error( $data )) :
                         foreach( $data as $rest_post ) :
                             if( $search ) :
-                                var_dump($rest_post);
-                                if(strstr($rest_post->title->rendered, $search)) :    
+                               if(strstr($rest_post->title->rendered, $search)) :    
             ?>
 <section class="py-5">
 
@@ -102,8 +101,6 @@ get_header(); ?>
                                    
             <?php           
                                 endif;
-                            else:
-                                echo 'else';
                             endif;
                         endforeach;
                     endif; 
