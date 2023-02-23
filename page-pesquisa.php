@@ -19,7 +19,7 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<section>
+<section class="py-5">
 
     <div class="container">
 
@@ -31,7 +31,6 @@ get_header(); ?>
                     $search = $_GET['p'];
 
                 $link_pattern = get_field( 'link_padrao_portal', 'option' ) . '/wp-json/wp/v2/posts';
-                // $post_news = $link_pattern . get_field( 'link_noticia', 'option');
                 $request_posts = wp_remote_get( $link_pattern );
 
                 if(!is_wp_error( $request_posts )) :
@@ -45,17 +44,6 @@ get_header(); ?>
                                if(strstr(strtolower(sanitizeString($rest_post->title->rendered)), strtolower(sanitizeString($search)))) :    
                                
             ?>
-                <section class="py-5">
-
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="col-12">
-
-                            <div class="row">
-
-                            
                                     <div class="col-lg-4 my-3">
 
                                         <a 
@@ -85,16 +73,10 @@ get_header(); ?>
                                             </span>
                                         </a>
                                     </div>
-                <!-- end loop -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</section>
-                                   
+                                    <!-- end loop -->               
             <?php           
                                 endif;
-                            else: echo 'else';
+                           
                             endif;
                         endforeach;
                     endif; 
