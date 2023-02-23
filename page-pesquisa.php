@@ -40,9 +40,9 @@ get_header(); ?>
 
                     if(!is_wp_error( $data )) :
                         foreach( $data as $rest_post ) :
-                                var_dump($rest_post);
+                                
                             if( $search ) :
-
+                                echo $search ;
                                if(strstr($rest_post->title->rendered, $search)) :    
                                 echo 'if';
             ?>
