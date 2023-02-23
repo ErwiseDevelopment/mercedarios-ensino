@@ -42,7 +42,7 @@ get_header(); ?>
                         foreach( $data as $rest_post ) :
                             if( $search ) :
                              
-                               if(strstr(strtolower($rest_post->title->rendered), strtolower($search))) :    
+                               if(strstr(strtolower(sanitizeString($rest_post->title->rendered)), strtolower(sanitizeString($search)))) :    
                                
             ?>
                 <section class="py-5">
