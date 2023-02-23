@@ -68,8 +68,6 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 						// 	echo "</pre>";
 						   if(!is_wp_error( $data )) :
 							//    foreach( $data as $rest_post ) :
-		
-								
 		?>
 
 			<div class="col-12">
@@ -134,9 +132,9 @@ style="border-top:5px solid;">
 
                             if(!is_wp_error( $data )) :
                                 foreach( $data as $rest_post ) :
-									$count++;
                                     if($id_url <> $rest_post->id) :
-										
+										$count++;
+
 										
                     ?>
 						<div class="col-lg-3 my-3 my-lg-0">
