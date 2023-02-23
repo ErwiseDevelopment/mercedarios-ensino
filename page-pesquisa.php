@@ -42,8 +42,9 @@ get_header(); ?>
                         foreach( $data as $rest_post ) :
                                 var_dump($rest_post);
                             if( $search ) :
-                                echo 'if';
+
                                if(strstr($rest_post->title->rendered, $search)) :    
+                                echo 'if';
             ?>
                 <section class="py-5">
 
