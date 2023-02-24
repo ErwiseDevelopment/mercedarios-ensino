@@ -50,7 +50,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 		<?php
 
 if(empty($_GET['id'])) {
-    echo "<script>window.location.href='" . get_home_url(null, 'noticia') . "';</script>";
+    echo "<script>window.location.href='" . get_home_url(null, 'noticias') . "';</script>";
     exit();
 }
 $request_posts = wp_remote_get($post_link);
