@@ -50,7 +50,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 		<?php
 
 if(empty($_GET['id'])) {
-    echo "<script>window.location.href='" . get_home_url(null, 'blogs') . "';</script>";
+    echo "<script>window.location.href='" . get_home_url(null, 'blog') . "';</script>";
     exit();
 }
 $request_posts = wp_remote_get($post_link);
@@ -170,7 +170,7 @@ style="border-top:5px solid;">
 						<div class="col-lg-3 my-3 my-lg-0">
 							<a 
 							class="card border-0 rounded-0 text-decoration-none"
-							href="<?php echo get_home_url( null, 'noticia/?id=' . $rest_post->id )  ?>">
+							href="<?php echo get_home_url( null, 'blog/?id=' . $rest_post->id )  ?>">
 
 								<div class="card-img w-100">
 									<img
