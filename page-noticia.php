@@ -48,27 +48,59 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
 
 		<div class="row">
 		<?php
-							//pega o id da pagina/post
-						 if( isset($_GET['id']))
-						 $id_url = $_GET['id'];
 
-							//url principal do site
-							 $link_pattern = get_field( 'link_padrao_portal', 'option' );
-							// echo $link_pattern;
-							 //concatena o link pricipal+o caminho das postagens
-							$post_link = $link_pattern . "wp-json/wp/v2/posts/$id_url";
-						//	echo $post_link;
-							 //faz a requisição com o site no caminho digitado acima
-							 $request_posts = wp_remote_get( $post_link );
-							 if(!is_wp_error( $request_posts )) :
-						   $body = wp_remote_retrieve_body( $request_posts );
-						   $data = json_decode( $body );
-						//    echo "<pre>";
-						// 	var_dump($data);
-						// 	echo "</pre>";
-						   if(!is_wp_error( $data )) :
-							//    foreach( $data as $rest_post ) :
-		?>
+if(empty($_GET['id'])) {
+    echo "<script>window.location.href='" . get_home_url(null, 'blogs') . "';</script>";
+    exit();
+}
+$request_posts = wp_remote_get($post_link);
+
+if (!is_wp_error($request_posts)) {
+    $response_code = wp_remote_retrieve_response_code($request_posts);
+
+    if ($response_code === 404) {
+        echo 'Post não encontrado';
+        exit();
+    }
+}
+$body = wp_remote_retrieve_body( $request_posts );
+$data = json_decode( $body );
+
+
+    //pega o id da pagina/post
+ if( isset($_GET['id']))
+ $id_url = $_GET['id'];
+
+
+    //url principal do site
+     $link_pattern = get_field( 'link_padrao_portal', 'option' );
+    // echo $link_pattern;
+     //concatena o link pricipal+o caminho das postagens
+    $post_link = $link_pattern . "wp-json/wp/v2/posts/$id_url";
+//	echo $post_link;
+     //faz a requisição com o site no caminho digitado acima
+     $request_posts = wp_remote_get( $post_link );
+	 if(!is_wp_error( $request_posts )) {
+        $response_code = wp_remote_retrieve_response_code($request_posts);
+
+		if (!is_wp_error($request_posts)) {
+			$response_code = wp_remote_retrieve_response_code($request_posts);
+			if ($response_code === 404) {
+				include '404.php'; // aqui você pode inserir o caminho do arquivo que deseja incluir
+				exit();
+			}
+		}
+	}
+     if(!is_wp_error( $request_posts )) :
+   $body = wp_remote_retrieve_body( $request_posts );
+   $data = json_decode( $body );
+//    echo "<pre>";
+// 	var_dump($data);
+// 	echo "</pre>";
+   if(!is_wp_error( $data )) :
+    //    foreach( $data as $rest_post ) :
+	
+?>
 
 			<div class="col-12">
 
