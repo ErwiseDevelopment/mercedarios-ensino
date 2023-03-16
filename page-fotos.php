@@ -107,7 +107,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                         if( $galleries->have_posts() ) :
                             while( $galleries->have_posts() ) : $galleries->the_post();
                     ?>
-                                <div class="col-4 my-3">
+                                <div class="col-lg-4 my-3">
 
                                     <a 
                                     class="card border-0 text-decoration-none"
@@ -116,7 +116,7 @@ style="border-top:20px solid;background-image:url(<?php echo get_template_direct
                                         <div class="l-page-photos__card-img card-img">
 
                                             <img
-                                            class="img-fluid"
+                                            class="img-fluid u-object-fit-cover"
                                             src="<?php echo get_field( 'capa_do_album' ) ?>"
                                             style="height:296px"
                                             alt="<?php the_title() ?> ">
